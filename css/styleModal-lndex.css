@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Modal general */
+.products-preview {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(20, 20, 20, 0.87);
+    z-index: 9999;
+}
+.products-preview.active {
+    display: flex;
+}
+
+.products-preview .preview::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.products-preview .preview {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    max-width: 500px;
+    margin: 10px 0 10px 0;
+    width: 90vw;
+    color: black;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    animation: modalShow 0.3s;
+    font-family : 'Montserrat', sans-serif;
+    font-size: 14.5px;
+}
+
+@keyframes modalShow {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.products-preview .preview img {
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 8px #000000;
+}
+
+.products-preview .preview .fas.fa-times {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.products-preview .preview .fas.fa-times:hover {
+    color: #e74c3c;
+}
+
+.products-preview .preview h3 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: #222;
+}
+
+.products-preview .preview .stars {
+    color: #f1c40f;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.products-preview .preview .price {
+    color: orangered;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 1rem 0;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.products-preview .preview .buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.products-preview .preview .buttons a {
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background: #222;
+    transition: background 0.2s;
+}
+
+.products-preview .preview .buttons a:hover {
+    opacity: 0.85;
+}
+
+/*MODO OSCURO DEL MODAL*/
+/* Modal adaptado a modo oscuro */
+body.modo-oscuro .products-preview .preview {
+    background: #232323;
+    color: #fff;
+}
+
+body.modo-oscuro .products-preview .preview h3 {
+    color: #fff;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    text-decoration: underline;
+}
+
+body.modo-oscuro .products-preview .preview .fas.fa-times {
+    color: #fff;
+}
+
+body.modo-oscuro .products-preview .preview .fas.fa-times:hover {
+    color: #ff6300;
+}
+
+body.modo-oscuro .products-preview .preview .price {
+    color: #ff6300;
+    font-weight: bold;
+}
+
+body.modo-oscuro .products-preview .preview .buttons a {
+    background: #444;
+    color: #fff;
+}
+
+body.modo-oscuro .products-preview .preview .buttons a.buy {
+    background: #2ecc71;
+}
+
+body.modo-oscuro .products-preview .preview .buttons a.cart {
+    background: #3498db;
+}
+
+@media(max-width: 768px) {
+    .products-preview .preview {
+        width: 80vw;
+        padding: 1.5rem 2rem;
+        font-size: 1rem;
+    }
+
+    .products-preview .preview img {
+        width: 95%;
+    }
+
+    .products-preview .preview h3 {
+        font-size: 1.2rem;
+        text-shadow: black 0.1em 0.1em 0.1em;
+        text-decoration: underline;
+    }
+
+    .products-preview .preview .price {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The QuackZone - PS3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleGen.css">
+    <link rel="stylesheet" href="/css/styleModal.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="/css/styleToast.css">
+</head>
+
+<body>
+    <!--ENCABEZADO-->
+    <header>
+        <div class="encabezado">
+            <!--ZONA IZQUIERDA DEL HEADER-->
+            <div class="encabezado-izquierda">
+                <div class="menu" id="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <!--ZONA CENTRO DEL HEADER-->
+            <div class="encabezado-centro">
+                <a href="/index.html" class="img1">
+                    <img src="/RECURSOS/logoPagina.png">
+                </a>
+            </div>
+            <!-- ZONA DERECHA DEL HEADER -->
+            <div class="encabezado-derecha">
+                <a href="#" class="action_btn" id="user-btn">
+                    <span id="user-icon"><i class="fa-solid fa-user"></i></span>
+                </a>
+                <a href="/html/Carrito.html" class="action_btn" onclick="actualizarContadorCarrito()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="contador-carrito">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="user-menu" id="user-menu">
+    <ul class="menu-list">
+      <li><a href="#" class="menu-MM" id="btn-cerrar"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar
+          Sesion</a></li>
+    </ul>
+  </div>
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <ion-icon name="home"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs5.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs4.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs3.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPC.html">
+                        <ion-icon name="desktop"></ion-icon>
+                        <span>PC</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--CUERPO-->
+    <section>
+        <br>
+        <h1>¡Los olvidados de PS3!</h1>
+        <div class="toast-container" id="toast"></div>
+        <div class="parent">
+            <div><img src="https://i.pinimg.com/736x/fa/cc/3c/facc3cf687268665b265b14ab76e1f0f.jpg"
+                    alt="Assaind Creed 3"></div>
+            <div><img src="https://i.pinimg.com/736x/c3/3c/f2/c33cf216f5fe5b8322312f4b2d3cc0aa.jpg"
+                    alt="Resident Evil 5"></div>
+            <div><img src="/RECURSOS/s-l1200.jpg" alt="PayDay 2"></div>
+            <div><img
+                    src="/RECURSOS/MV5BNWU0NWQ1ODYtNjE4OS00NzViLWJiOGMtZWMzNTVmMGQ1ZTQ2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                    alt="Recistance 3"></div>
+            <div><img src="/RECURSOS/HD-wallpaper-borderlands-begins-gamer-games.jpg" alt="Bordelands 2"></div>
+        </div>
+        <div class="contenedorCarrusel">
+            <div class="carrusel">
+                <div class="slides">
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="https://wallpapers.com/images/hd/call-of-duty-black-ops-2-zrsgrwvomyz6nc37.jpg" alt="COD Black Ops">
+                            <div class="blur-content">
+                                <h3>Call of Duty: Black Ops</h3>
+                                <button onclick="addToCart('Call of Duty: Black Ops', 'Call of Duty: Black Ops te lleva a una guerra secreta durante la Guerra Fría, donde asumes el rol de un agente encubierto en operaciones altamente clasificadas. Combina una campaña intensa, multijugador lleno de acción y el aclamado modo Zombis para una experiencia completa.', '145.00', '/RECURSOS/CoD_Black_Ops_cover.webp', 'PS3', 'Shooter y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/68246750da861.jpeg" alt="Minecraft">
+                            <div class="blur-content">
+                                <h3>Minecraft</h3>
+                                <button onclick="addToCart('Minecraft', 'Minecraft es un juego de construcción y aventura en mundo abierto donde puedes explorar, minar, crear y sobrevivir en mundos infinitos. Con gráficos pixelados y libertad total, fomenta la creatividad tanto en solitario como en modo multijugador.', '123.30', 'https://i.pinimg.com/474x/d2/45/9d/d2459de3246eb8a7d3504903d200f26c.jpg', 'PS3', 'Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="https://images7.alphacoders.com/509/thumb-1920-509175.jpg" alt="COD Black Ops 2">
+                            <div class="blur-content">
+                                <h3>Call of Duty: Ghost</h3>
+                                <button onclick="addToCart('Call of Duty: Ghost', 'Call of Duty: Ghosts te sumerge en una guerra táctica tras un ataque devastador en Estados Unidos, donde un escuadrón de élite llamado (Ghosts) lucha por la supervivencia, con intensas campañas, sigilo y multijugador renovado, ofrece acción explosiva y narrativa oscura.', '216.20', 'https://i.pinimg.com/736x/73/6c/91/736c91e2c3790393e984366809824c21.jpg', 'PS3', 'Shooter y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/946753.png" alt="FIFA 17">
+                            <div class="blur-content">
+                                <h3>FIFA 17</h3>
+                                <button onclick="addToCart('FIFA 17', 'FIFA 17 lleva el fútbol a un nuevo nivel con la introducción del motor Frostbite, ofreciendo gráficos más realistas y una jugabilidad más dinámica.', '150.50', 'https://i.pinimg.com/736x/0f/3c/36/0f3c366952ea64d2503133191e52c38e.jpg', 'PS3', 'Deportes')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/149156.jpg" alt="COD Modern Warfare 3">
+                            <div class="blur-content">
+                                <h3>Call of Duty: Modern Warfare 3</h3>
+                                <button onclick="addToCart('Call of Duty: Modern Warfare 3', 'Call of Duty: Modern Warfare 3 para PS3 te sumerge en una intensa guerra global con acción cinematográfica y combates rápidos. Continúa la épica historia de la saga con misiones cooperativas, multijugador competitivo y un ritmo trepidante de principio a fin.', '120.80', 'https://wallpaperswide.com/download/call_of_duty_modern_warfare_3-wallpaper-480x640.jpg', 'PS3', 'Deportes')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+            </div>
+            <div class="carousel-dots"></div>
+        </div>
+    </section>
+    <main class="centrado">
+        <div class="juegos-wrapper">
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://preview.redd.it/za3pxrr77px31.jpg?width=640&crop=smart&auto=webp&s=85cb67d9c7db662d68bc2e561b21d914a014ccd0"
+                        alt="COD black ops 2" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Call Of Duty: Black Ops II</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Call of Duty: Black Ops II es un shooter en primera persona que combina acción bélica
+                            futurista con decisiones que afectan la historia, ofreciendo múltiples finales. Ambientado
+                            en conflictos del siglo XXI y la Guerra Fría, el juego presenta una intensa campaña,
+                            multijugador competitivo y el popular modo Zombis.
+                        </p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://preview.redd.it/za3pxrr77px31.jpg?width=640&crop=smart&auto=webp&s=85cb67d9c7db662d68bc2e561b21d914a014ccd0"
+                            alt="COD black ops 2" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/F6vOWbJ46XU" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Call Of Duty: Black Ops II', 'Call of Duty: Black Ops II es un shooter en primera persona que combina acción bélica futurista con decisiones que afectan la historia, ofreciendo múltiples finales, ambientado en conflictos del siglo XXI y la Guerra Fría.', '150.30', 'https://i.pinimg.com/736x/d1/8f/62/d18f62a446033026053339394944c1fb.jpg', 'PS3', 'Shooter y Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="/RECURSOS/uncharted_2_among_thieves-916936971-large.jpg" alt="Uncharted 2"
+                        class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Uncharted 2</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Uncharted 2 es un videojuego de acción y aventuras que sigue al cazatesoros Nathan Drake en
+                            una peligrosa búsqueda por la mítica ciudad de Shambhala. Con una narrativa cinematográfica,
+                            escenarios exóticos y espectaculares secuencias de acción, el juego ofrece una experiencia
+                            intensa y envolvente.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="/RECURSOS/uncharted_2_among_thieves-916936971-large.jpg" alt="Uncharted 2"
+                            class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/tzy2-UuFPJg" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Uncharted 2: El Reino de los Ladrones', 'Uncharted 2 es un videojuego de acción y aventuras que sigue al cazatesoros Nathan Drake en una peligrosa búsqueda por la mítica ciudad de Shambhala. ', '70.40', '/RECURSOS/uncharted_2_among_thieves-916936971-large.jpg', 'PS3', 'Aventura')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="/RECURSOS/lVPrvW9AyMplvmdXsJmcHoLz.jpg" alt="God of war III" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>God of War III</h2>
+                    </div>
+                    <div class="div2">
+                        <p>God of War III es un videojuego de acción que sigue a Kratos en su épica venganza contra los
+                            dioses del Olimpo, desatando el caos en el mundo mitológico griego. Con combates brutales,
+                            jefes colosales y una historia cargada de furia y tragedia, el juego cierra la trilogía
+                            original con intensidad y espectacularidad.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="/RECURSOS/lVPrvW9AyMplvmdXsJmcHoLz.jpg" alt="God of war III" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/bPi7ORsTp-I" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('God of War III', 'God of War III es un videojuego de acción que sigue a Kratos en su épica venganza contra los dioses del Olimpo, desatando el caos en el mundo mitológico griego.', '70.30', '/RECURSOS/lVPrvW9AyMplvmdXsJmcHoLz.jpg', 'PS3', 'Aventura y Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="/RECURSOS/ff864677735ca4c348015ff6749e59cd.jpg" alt="red dead redemption"
+                        class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Red Dead Redemption</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Red Dead Redemption es un videojuego de mundo abierto que narra la historia de John Marston,
+                            un exforajido que busca redimirse capturando a sus antiguos compañeros de banda. Ambientado
+                            en el ocaso del Viejo Oeste, el juego combina acción, drama y exploración en un entorno
+                            vasto y realista lleno de decisiones morales.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="/RECURSOS/ff864677735ca4c348015ff6749e59cd.jpg" alt="red dead redemption"
+                            class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/FDdT8zMl7Xc" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Red Dead Redemption', 'Red Dead Redemption es un videojuego de mundo abierto que narra la historia de John Marston, un exforajido que busca redimirse capturando a sus antiguos compañeros de banda.', '108.90', '/RECURSOS/ff864677735ca4c348015ff6749e59cd.jpg', 'PS3', 'Acción y Aventura')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
+        <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+        <br>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.telgram.com" target="_blank" title="Telegram">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a href="http://www.discord.com" target="_blank" title="Discord">
+                <i class="fa-brands fa-discord"></i>
+            </a>
+        </div>
+        <br>
+        <nav>
+            <a href="#">Política de Privacidad</a> |
+            <a href="#">Términos y Condiciones</a>
+        </nav>
+        <div class="payment-logos">
+            <div class="payment-logos">
+                <ul>
+                    <li><img src="/RECURSOS/image-removebg-preview.png" alt="Todos los logos"></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Carrito -->
+    <div id="modal-carrito" class="modal-carrito">
+        <div class="modal-contenido">
+            <div class="modal-icono">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <h2>Añadido al carrito</h2>
+            <div class="modal-botones">
+                <button class="modal-btn amarillo" id="btn-continuar">Continuar comprando</button>
+                <button class="modal-btn morado" id="btn-ver-carrito">Ver carrito</button>
+            </div>
+        </div>
+    </div>
+    <button id="modo-oscuro-btn" class="boton-flotante">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="/javaScript/script.js"></script>
+    <script src="/javaScript/scriptCarrito.js"></script>
+    <script src="/javaScript/scriptModoOscuro.js"></script>
+    <script src="/javaScript/scriptCarrusel.js"></script>
+</body>
+</html>

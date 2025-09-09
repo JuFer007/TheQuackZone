@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The QuackZone - Carrito de compras</title>
+  <link rel="stylesheet" href="/css/styleCarrito.css" />
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/css/styleToast.css">
+</head>
+<body>
+  <header>
+    <div class="encabezado">
+      <!--ZONA IZQUIERDA DEL HEADER-->
+      <div class="encabezado-izquierda">
+        <div class="menu" id="menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <!--ZONA CENTRO DEL HEADER-->
+      <div class="encabezado-centro">
+        <a href="/index.html" class="img1">
+          <img src="/RECURSOS/logoPagina.png">
+        </a>
+      </div>
+      <!-- ZONA DERECHA DEL HEADER -->
+      <div class="encabezado-derecha">
+        <a href="#" class="action_btn" id="user-btn">
+          <span id="user-icon"><i class="fa-solid fa-user"></i></span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="user-menu" id="user-menu">
+    <ul class="menu-list">
+      <li><a href="#" class="menu-MM" id="btn-cerrar"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar
+          Sesion</a></li>
+    </ul>
+  </div>
+  <div class="sidebar" id="sidebar">
+    <nav>
+      <ul>
+        <li>
+          <a href="/index.html">
+            <ion-icon name="home"></ion-icon>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="/html/JuegosPs5.html">
+            <ion-icon name="logo-game-controller-b"></ion-icon>
+            <span>PS5</span>
+          </a>
+        </li>
+        <li>
+          <a href="/html/JuegosPs4.html">
+            <ion-icon name="logo-game-controller-b"></ion-icon>
+            <span>PS4</span>
+          </a>
+        </li>
+        <li>
+          <a href="/html/JuegosPs3.html">
+            <ion-icon name="logo-game-controller-b"></ion-icon>
+            <span>PS3</span>
+          </a>
+        </li>
+        <li>
+          <a href="/html/JuegosPC.html">
+            <ion-icon name="desktop"></ion-icon>
+            <span>PC</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <section>
+    <div class="toast-container" id="toast"></div>
+    <div class="empty-cart-message" id="carritoVacio">
+      <i class="fa-solid fa-cart-shopping"></i>
+      ¡El carrito está vacío!
+      <section>
+        <button class="qty-btn" onclick="window.location.href='/index.html'">Iniciar compra</button>
+      </section>
+      <div>
+        <!-- Carrusel de sugerencias debajo del carrito vacío -->
+        <div class="carousel-container" id="carousel">
+          <h3>Te puede interesar</h3>
+          <p id="letra">Explora nuestros videojuegos más vendidos<i class='bx bx-joystick'></i> :</p>
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/39/11/9e/39119e9b4c6f92902b76f089f00bf51d.jpg" alt="TLOU II">
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://i.blogs.es/juegos/13424/red_dead_3__nombre_temporal_/fotos/maestras/red_dead_3__nombre_temporal_-4030936.jpg"
+                  alt="RRD2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/aa/65/be/aa65be39f98195b92ee2239b97c9866e.jpg"
+                  alt="GHOST of Tsushima">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/54/39/c8/5439c8c20368017e14aabb133d9abe2d.jpg" alt="Ghost Recon">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/83/58/9d/83589d8de990e45c165d25d5cd676bb5.jpg"
+                  alt="COD black ops 6">
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://i.blogs.es/juegos/18551/the_last_of_us_remake/fotos/ficha/the_last_of_us_remake-5734699.jpg"
+                  alt="TLOU I">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/2a/88/c7/2a88c79b4c82ffbca67a785528a228d3.jpg"
+                  alt="COD cold at war">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/a0/7e/eb/a07eeb846f05daa0554bdfd609f3fcb7.jpg" alt="Spiderman 2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/04/c2/79/04c279b9557116d8e2d1e7db09cecbc3.jpg" alt="COD WWII">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/b1/d1/21/b1d121aa8103cc93e58edbd312ba203c.jpg" alt="Days Gone">
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://i.3djuegos.com/juegos/17544/god_of_war_ragnarok/fotos/ficha/god_of_war_ragnarok-5732812.jpg"
+                  alt="GOD of War">
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://m.media-amazon.com/images/M/MV5BZWYyNDRkNzAtOTI0Ny00NDQwLWE5M2YtMWFiZDdmMDc4MmQ0XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg"
+                  alt="Cyberpunk 2077">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/13/48/84/13488489432aecb1844ac3b32dbbbf4a.jpg" alt="Dying Light">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/79/1a/ca/791acac7db9356025432759c7156e949.jpg"
+                  alt="COD Modern Warfare">
+              </div>
+              <div class="carousel-item">
+                <img src="https://piks.eldesmarque.com/thumbs/400/bin/2023/11/16/portada_gta_vi_2.jpg" alt="GTA VI">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/35/3a/95/353a9510ac9ea519a767898612fdb581.jpg" alt="The Witcher">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/57/b7/a0/57b7a0b04b830fd60d5faed0cd9276eb.jpg" alt="DEAD INSLAND 2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/3e/31/6b/3e316bd043de1d66c8c3f1dac55b2920.jpg" alt="GTA V">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/53/5a/44/535a4474909a6a57c541a4c29c77e988.jpg"
+                  alt="DB Sparking zero">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.3djuegos.com/juegos/15924/superman__2018_/fotos/ficha/superman__2018_-5794815.webp"
+                  alt="SS">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/b2/48/a4/b248a47671cc9b3d3f7c1fdd23a0a8a5.jpg"
+                  alt="Call of Duty Modern Warfare III">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/e8/db/1d/e8db1d01cfa8c52561c2631f48321cc7.jpg" alt="Elden Ring">
+              </div>
+              <div class="carousel-item">
+                <img src="/RECURSOS/dark-souls-3-the-fire-fades-edition-519671.9.webp" alt="Dark Souls 3">
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://preview.redd.it/82kxb86hzng31.jpg?width=2000&format=pjpg&auto=webp&s=2f251e21d49f065667fcd3f2b9ec771a945f575d"
+                  alt="NFS">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <main class="main-container">
+      <section class="cart-section">
+        <div class="cart-box">
+          <div class="cart-items">
+            <h2>
+              Mis compras <i class="fa-solid fa-cart-shopping"> :</i>
+            </h2>
+          </div>
+        </div>
+      </section>
+      <div class="sumary-info-wrapper">
+        <aside class="summary-section">
+          <div class="summary-box">
+            <h2>Resumen de su compra</h2>
+            <button class="yellow-btn">Finalizar compra</button>
+            <div class="summary-details"></div>
+            <div class="summary-total">
+              <span>Total S/. </span>
+              <span class="total-price"></span>
+            </div>
+            <div class="trustpilot">
+              <div id="star-rating"></div>
+            </div>
+          </div>
+        </aside>
+        <aside class="info-section">
+          <div class="info-box">
+            <div id="letraInfo">
+              <i class="fa-solid fa-circle-info"></i>
+              Sobre Nosotros</div>
+            <div class="tabs" id="tabs">
+              <div class="tab-encabezados">
+                <button class="activo">Acerca de la Página Web</button>
+                <button>Políticas de Envío y Devoluciones</button>
+                <button>Atención al Cliente</button>
+                <span class="indicador"></span>
+              </div>
+              <div class="contenido">
+                <div class="activo">
+                  <p class="infoTabs">The QuackZone 🦆, el mejor sitio web para comprar videojuegos, rápido y seguro para todos los gamers.</p>
+                </div>
+                <div>
+                  <p class="infoTabs">El envío puede demorar entre 4 a 5 días. Puedes devolver productos dentro de los 30 días.</p>
+                </div>
+                <div>
+                  <div>
+                    <p class="infoTabs">
+                      Contáctanos al correo electrónico<span class="correo">soporte@tquackzone.com</span> o llama al número<span class="numero">912345678</span> para más información o dudas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </section>
+  <footer>
+    <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
+    <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" title="Facebook">
+        <i class="fa-brands fa-facebook fa-sm"></i>
+      </a>
+      <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp fa-sm"></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" title="Twitter">
+        <i class="fa-brands fa-twitter fa-sm"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" title="Instagram">
+        <i class="fa-brands fa-instagram fa-sm"></i>
+      </a>
+      <a href="https://web.telegram.org/k/" target="_blank" title="Telegram">
+        <i class="fa-brands fa-telegram fa-sm"></i>
+      </a>
+      <a href="http://www.discord.com" target="_blank" title="Discord">
+        <i class="fa-brands fa-discord fa-sm"></i>
+      </a>
+    </div>
+    <nav>
+      <a href="#">Política de Privacidad</a> |
+      <a href="#">Términos y Condiciones</a>
+    </nav>
+    <div class="payment-logos">
+      <ul>
+        <li><img src="/RECURSOS/image-removebg-preview.png" alt="Todos los logos"></li>
+      </ul>
+    </div>
+  </footer>
+  <button id="modo-oscuro-btn" class="boton-flotante">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+  <script src="/javaScript/script.js"></script>
+  <script src="/javaScript/scriptCarrito.js"></script>
+  <script src="/javaScript/scriptModoOscuro.js"></script>
+</body>
+</html>

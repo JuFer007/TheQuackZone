@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The QuackZone | Inicio</title>
+    <link rel="stylesheet" href="/css/styleIndex2.css">
+    <link rel="stylesheet" href="/css/styleModal.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styleModal-lndex.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="contenedor">
+                <div class="izquierda">
+                    <div class="menu" id="menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+
+                <div class="centro">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <img src="RECURSOS/logoPagina.png" alt="Logo de The QuackZone">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="derecha">
+                    <a href="#" class="action_btn" id="user-btn">
+                        <span id="user-icon"><i class="fa-solid fa-user"></i></span>
+                    </a> 
+                    <a href="/html/Carrito.html" class="action_btn" onclick="actualizarContadorCarrito()">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="contador-carrito">0</span>
+                    </a>
+                </div>
+                
+            </div>
+        </header>
+        <div class="user-menu" id="user-menu">
+            <ul class="menu-list">
+                <li><a href="#" class="menu-MM" id="btn-cerrar"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar Sesion</a></li>
+            </ul>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#Accion">
+                            <ion-icon name="body"></ion-icon>
+                            <span>Accion</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Aventura">
+                            <ion-icon name="compass"></ion-icon>
+                            <span>Aventura</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Deportes">
+                            <ion-icon name="football"></ion-icon>
+                            <span>Deportes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Lucha">
+                            <ion-icon name="hand"></ion-icon>
+                            <span>Lucha</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Supervivencia">
+                            <ion-icon name="bonfire"></ion-icon>
+                            <span>Supervivencia</span>
+                        </a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="/html/JuegosPs5.html">
+                            <ion-icon name="logo-game-controller-b"></ion-icon>
+                            <span>PS5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/html/JuegosPs4.html">
+                            <ion-icon name="logo-game-controller-b"></ion-icon>
+                            <span>PS4</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/html/JuegosPs3.html">
+                            <ion-icon name="logo-game-controller-b"></ion-icon>
+                            <span>PS3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/html/JuegosPC.html">
+                            <ion-icon name="desktop"></ion-icon>
+                            <span>PC</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <main>
+            <div class="toast-container" id="toast"></div>
+            <section id="home">
+                <br>
+                <h2>Juegos Populares</h2>
+                <div class="carrusel">
+                    <!-- COD Black Ops 6 -->
+                    <div class="cover-container">
+                        <img src="https://i.pinimg.com/736x/83/58/9d/83589d8de990e45c165d25d5cd676bb5.jpg"
+                            class="cover-img" alt="Portada normal - COD BLACK OPS 6">
+                        <div class="hover-content">
+                            <img src="/RECURSOS/cod6.jpeg" class="cover-img-hover"
+                                alt="Portada alternativa - COD BLACK OPS 6">
+                            <div class="overlay">
+                                <h4>Call of Duty: Black Ops 6</h4>
+                                <div class="precio">S/. 383.10</div>
+                                <button class="buy-btn"
+                                    onclick="addToCart('Call of Duty: Black Ops 6', 'Black Ops 6 mezcla acción táctica con momentos cinematográficos, llevando la franquicia a un nuevo nivel de realismo y tensión.', '383.10', 'https://i.pinimg.com/736x/83/58/9d/83589d8de990e45c165d25d5cd676bb5.jpg', 'PS5', 'Shooter y Acción')">
+                                    <i class="fas fa-shopping-cart"></i> Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- COD Modernw Warfare III -->
+                    <div class="cover-container">
+                        <img src="https://i.pinimg.com/736x/b2/48/a4/b248a47671cc9b3d3f7c1fdd23a0a8a5.jpg"
+                            class="cover-img" alt="Portada normal - COD Modern Warfare III">
+                        <div class="hover-content">
+                            <img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2023/08/call-of-duty-modern-warfare-3-2.jpeg?fit=1920%2C1147&quality=50&strip=all&ssl=1"
+                                class="cover-img-hover" alt="Portada alternativa - COD Modern Warfare III">
+                            <div class="overlay">
+                                <h4>Call of Duty: Modern Warfare III</h4>
+                                <div class="precio">S/. 170.20</div>
+                                <button class="buy-btn"
+                                    onclick="addToCart('Call of Duty: Moder Warfare III', 'Call of Duty: Modern Warfare 3 continúa la intensa historia del reboot iniciado en 2019, reuniendo a los miembros de la Fuerza Operativa 141 en su lucha contra el ultranacionalista Vladimir Makarov.', '170.20', 'https://i.pinimg.com/736x/b2/48/a4/b248a47671cc9b3d3f7c1fdd23a0a8a5.jpg', 'PS5', 'Shooter y Acción')">
+                                    <i class="fas fa-shopping-cart"></i> Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Days Gone -->
+                    <div class="cover-container">
+                        <img src="https://preview.redd.it/days-gone-%C3%B6neri-mod-listesi-v0-vhu4salf0q6a1.png?width=549&format=png&auto=webp&s=bfcd69c4954c5fc2f05b114b456c67be927cb63a"
+                            class="cover-img" alt="Portada normal - Days Gone">
+                        <div class="hover-content">
+                            <img src="https://images.gog-statics.com/f9d977cb0734a95b4936c0d3a3fa8e3e0133d60cf4bb9227d4f4b9e5b0679ad0.jpg"
+                                class="cover-img-hover" alt="Portada alternativa - Days Gone">
+                            <div class="overlay">
+                                <h4>Days Gone</h4>
+                                <div class="precio">S/. 140.50</div>
+                                <button class="buy-btn"
+                                    onclick="addToCart('Days Gone', 'Days Gone es un juego de acción y supervivencia en mundo abierto ambientado en un Estados Unidos postapocalíptico, donde un misterioso brote ha convertido a millones en criaturas salvajes conocidas como freakers.', '140.50', 'https://preview.redd.it/days-gone-%C3%B6neri-mod-listesi-v0-vhu4salf0q6a1.png?width=549&format=png&auto=webp&s=bfcd69c4954c5fc2f05b114b456c67be927cb63a', 'PC', 'Acción y Aventura')">
+                                    <i class="fas fa-shopping-cart"></i> Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ghos Recon Widnlands -->
+                    <div class="cover-container">
+                        <img src="https://i.pinimg.com/736x/54/39/c8/5439c8c20368017e14aabb133d9abe2d.jpg"
+                            class="cover-img" alt="Portada normal - Ghos Recon Windlans">
+                        <div class="hover-content">
+                            <img src="https://wallpapers.com/images/hd/best-ghost-recon-wildlands-background-1920-x-1080-4mqmhxzbbulxmhjd.jpg"
+                                class="cover-img-hover" alt="Portada alternativa - Ghost Recon Wildlands">
+                            <div class="overlay">
+                                <h4>Tom Clancy's: Ghost Recon Windlas</h4>
+                                <div class="precio">S/. 170.70</div>
+                                <button class="buy-btn"
+                                    onclick="addToCart('Tom Clancy: Ghost Recon Windlands', 'Tom Clancy\'s Ghost Recon Wildlands es un videojuego de disparos táctico en tercera persona ambientado en un enorme mundo abierto inspirado en Bolivia. Asumes el rol de un miembro de los Ghosts, una unidad élite del ejército estadounidense, con la misión de desmantelar el cartel de drogas Santa Blanca', '170.70', 'https://i.pinimg.com/736x/54/39/c8/5439c8c20368017e14aabb133d9abe2d.jpg', 'PC', 'Acción, Shooter y Aventura')">
+                                    <i class="fas fa-shopping-cart"></i> Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <!--SECCIÓN DE ACCIÓN-->
+            <section id="Accion">
+                <h3>Los mejores juegos de acción</h3>
+                <br>
+                <div class="juegosAccion">
+                    <div class="juegoA">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg"
+                                alt="The Last of Us Parte II">
+                        </div>
+                    </div>
+                    <div class="juegoA">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/fd/80/f9/fd80f9b0bc7628319ac46c4eb0e420e4.jpg"
+                                alt="COD Modern Warfare 2">
+                        </div>
+                    </div>
+                    <div class="juegoA">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/67/51/8d/67518d669d51b80ce51a3e0854108253.jpg"
+                                alt="Resident Evil 4">
+                        </div>
+                    </div>
+                    <div class="juegoA">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/ce/8b/83/ce8b8349a2b94a043c2e3e2a1f2e32e4.jpg"
+                                alt="Good of War Ragnarok">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <!--SECCIÓN DE AVENTURA-->
+            <section id="Aventura">
+                <h3>Los mejores juegos de aventura</h3>
+                <br>
+                <div class="juegosAventura">
+                    <div class="juegoAvtr">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/08/35/85/083585979b0592236e2904b5a0e65c3e.jpg"
+                                alt="Grand Theft Auto V">
+                        </div>
+                    </div>
+                    <div class="juegoAvtr">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/37/13/ff/3713ff58d61dcdb2208c633a132bec00.jpg"
+                                alt="Back 4 Blood">
+                        </div>
+                    </div>
+                    <div class="juegoAvtr">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/30/ac/48/30ac487bc98bb07fbb4abb4feca4a8d4.jpg"
+                                alt="Ghost Tsushima">
+                        </div>
+                    </div>
+                    <div class="juegoAvtr">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/4b/ee/1e/4bee1e0fc85df97c041d29060ffbc977.jpg"
+                                alt="Uncharted 4">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <!--SECCIÓN DE DEPORTES-->
+            <section id="Deportes">
+                <h3>Los mejores juegos de deportes</h3>
+                <br>
+                <div class="juegosDeportes">
+                    <div class="juegoD">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/27/c7/14/27c71467a4e74dfa0a7ed0c482fe1d53.jpg"
+                                alt="FC25">
+                        </div>
+                    </div>
+                    <div class="juegoD">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://vracingnews.de/media/31607-f1-25-ank%C3%BCndigung-2503-jpg/?thumbnail=large"
+                                alt="F1 25">
+                        </div>
+                    </div>
+                    <div class="juegoD">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/97/72/79/9772794ac68cee5914caed4680973f97.jpg"
+                                alt="NBA 2k25">
+                        </div>
+                    </div>
+                    <div class="juegoD">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/52/6d/9b/526d9ba56acec0bf68bc28a8c52eba66.jpg"
+                                alt="Gran Turismo 7">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <!--SECCIÓN DE LUCHA-->
+            <section id="Lucha">
+                <h3>Los mejores juegos de lucha</h3>
+                <br>
+                <div class="juegosLucha">
+                    <div class="juegoL">
+                        <div class="imagen-con-descripcion">
+                            <img src="RECURSOS/mk1.jpg" alt="Mortal Kombat 1">
+                        </div>
+                    </div>
+                    <div class="juegoL">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/1c/d4/fd/1cd4fdde3039555d52ab49e646eaad76.jpg"
+                                alt="Tekken7">
+                        </div>
+                    </div>
+                    <div class="juegoL">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/65/cd/51/65cd51dfa47ef1a9ac2ef9fa54f3aaca.jpg"
+                                alt="Street Figther">
+                        </div>
+                    </div>
+                    <div class="juegoL">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/b7/b4/cf/b7b4cf8c56224c828b12d7e8ff7594f7.jpg"
+                                alt="Mortal Kombat 11">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <!--SECCIÓN DE SUPERVIVENCIA-->
+            <section id="Supervivencia">
+                <h3>Los mejores juegos de supervivencia</h3>
+                <br>
+                <div class="juegosSupervivencia">
+                    <div class="juegoS">
+                        <div class="imagen-con-descripcion">
+                            <img src="RECURSOS/minecraft-games-posters-hd-wallpaper-preview.jpg" alt="Minecraft">
+                        </div>
+                    </div>
+                    <div class="juegoS">
+                        <div class="imagen-con-descripcion">
+                            <img src="RECURSOS/capsule_616x353.jpg" alt="Project Zomboid">
+                        </div>
+                    </div>
+                    <div class="juegoS">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/74/ca/89/74ca89a99eadcaee94014c566fa0beac.jpg"
+                                alt="Stardew Valley">
+                        </div>
+                    </div>
+                    <div class="juegoS">
+                        <div class="imagen-con-descripcion">
+                            <img src="https://i.pinimg.com/736x/29/89/cc/2989cc7944c3825f03c51a7a8eab262a.jpg"
+                                alt="World war Z">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!---->
+    <!--Modal Index-->
+    <!--Modal Juegos de Accion-->
+    <div class="products-preview">
+        <!-- Modal para The Last of Us Parte II -->
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/6d/49/67/6d4967f7c66011f46dc88cad2ef17770.jpg" alt="">
+            <h3>The Last of Us Parte II</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 250 )</span>
+            </div>
+            <p>The Last of Us Parte II es una intensa historia de venganza y redención en un mundo
+                postapocalíptico devastado por una pandemia. Con una narrativa emocional y un gameplay brutal,
+                acompaña a Ellie en su lucha por sobrevivir y encontrar justicia.</p>
+            <div class="price">S/. 159.50</div>
+            <div class="buttons">
+                <button class="buy-btn"
+                    onclick="addToCart('The Last of Us Parte II', 'The Last of Us Parte II es una obra maestra narrativa que combina emoción, tensión, a través de Ellie, vivirás una travesía cruda y poderosa en un mundo devastado por la pérdida y la venganza.', '159.50', '/RECURSOS/Part_II_Remastered_cover_art.webp', 'PS5', 'Accion y Aventura')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para Call of Duty: Modern Warfare II -->
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/fd/80/f9/fd80f9b0bc7628319ac46c4eb0e420e4.jpg" alt="">
+            <h3>Call of Duty: Modern Warfare II</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 320 )</span>
+            </div>
+            <p>Call of Duty: Modern Warfare II es un videojuego de disparos en primera persona que sigue las
+                intensas misiones de un grupo de élite militar mientras luchan contra una amenaza global. Con
+                una campaña llena de acción y un modo multijugador adictivo, ofrece una experiencia de guerra
+                moderna con gráficos realistas y mecánicas de juego mejoradas.</p>
+            <div class="price">S/. 165.50</div>
+            <div class="buttons">
+                <button class="buy-btn"
+                    onclick="addToCart('Call of Duty: Modern Warfare II', 'Call of Duty: Modern Warfare 2, te sumerge en combates tácticos intensos con gráficos de última generación y una campaña cinematográfica.', '165.50', 'https://i.3djuegos.com/juegos/18491/call_of_duty_modern_warfare_2/fotos/ficha/call_of_duty_modern_warfare_2-5754880.webp', 'PS5', 'Shooter y Accion')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para Call of Duty: Reident Evil 4 -->
+        <div class="preview" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/67/51/8d/67518d669d51b80ce51a3e0854108253.jpg" alt="">
+            <h3>Resident Evil 4</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 320 )</span>
+            </div>
+            <p>Resident Evil 4 es un juego de terror y acción que sigue a Leon S.
+                Kennedy, un agente del gobierno, mientras intenta rescatar a la hija del presidente de
+                los EE. UU. en un remoto pueblo europeo infestado por criaturas mutadas. Con una
+                jugabilidad dinámica, combates estratégicos y una atmósfera tensa.</p>
+            <div class="price">S/. 90.00</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('Resident Evil 4',
+                'Resident Evil 4 es un juego de terror y acción que sigue a Leon S. Kennedy, un agente del gobierno,entras intenta rescatar a la hija del presidente de los EE. UU. en un remoto pueblo europeo infestado por criaturas mutadas. Con una jugabilidad dinámica, combates estratégicos y una atmósfera tensa.', 
+                '90.00', 
+                'https://i.3djuegos.com/juegos/18541/resident_evil_4_remake/fotos/ficha/resident_evil_4_remake-5789986.webp',
+                'PS5',
+                'Terror y Acción')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/ce/8b/83/ce8b8349a2b94a043c2e3e2a1f2e32e4.jpg" alt="">
+            <h3>God of War Ragnarök</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 145 )</span>
+            </div>
+            <p>God of War Ragnarök es un juego de acción y aventura que sigue a
+                Kratos y su hijo Atreus mientras enfrentan los eventos del Ragnarök, la catástrofe del
+                fin del mundo en la mitología nórdica. Con una narrativa épica, combate brutal y
+                hermosos paisajes, el juego profundiza en la relación padre-hijo mientras exploran los
+                reinos y luchan contra dioses y criaturas mitológicas.</p>
+            <div class="price">S/. 199.00</div>
+            <div class="buttons">
+                <button class="buy-btn"
+                    onclick="addToCart('God of War Ragnarök', 'God of War: Ragnarök eleva la saga a nuevas alturas con combates épicos, paisajes nórdicos impresionantes y una narrativa profundamente emotiva. Acompaña a Kratos y Atreus en su lucha contra el destino mientras el fin de los dioses se aproxima.', '182.20', 'https://image.api.playstation.com/vulcan/ap/rnd/202207/1117/CyWGhpXfSmIcuecOFXG841JE.png', 'PS5', 'Accion y Aventura')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/08/35/85/083585979b0592236e2904b5a0e65c3e.jpg" alt="">
+            <h3>Grand Theft Auto V</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 150 )</span>
+            </div>
+            <p>Grand Theft Auto V es un videojuego de acción y aventura en mundo
+                abierto que sigue las historias entrelazadas de tres criminales mientras realizan robos
+                y enfrentan a la ley en la ciudad ficticia de Los Santos. Con un vasto mundo para
+                explorar, una trama envolvente y un modo multijugador en línea, ofrece una experiencia
+                de libertad total y acción sin fin.</p>
+            <div class="price">S/. 110.90</div>
+            <div class="buttons">
+                <button class="buy-btn"
+                    onclick="addToCart('Grand Theft Auto V', 'Grand Theft Auto V te sumerge en el caótico y vibrante mundo de Los Santos con gráficos mejorados y una jugabilidad fluida. Vive una historia criminal épica a través de tres personajes únicos en un mundo abierto lleno de acción y libertad.', '124.40', 'https://thegamekeys.in/wp-content/uploads/2023/08/71uizbdZ5dL.jpg', 'PS5', 'Accion')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para Back 4 Blood -->
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/37/13/ff/3713ff58d61dcdb2208c633a132bec00.jpg" alt="">
+            <h3>Back 4 Blood</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 150 )</span>
+            </div>
+            <p>Back 4 Blood es un juego de disparos cooperativo en primera
+                persona donde los jugadores luchan contra hordas de zombis en un mundo
+                post-apocalíptico. Con un enfoque en el trabajo en equipo y una acción frenética, el
+                juego ofrece una experiencia de supervivencia desafiante y llena de adrenalina.</p>
+            <div class="price">S/. 179.99</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('Back 4 Blood',
+                'Back 4 Blood es un juego de disparos cooperativo en primera persona donde los jugadores luchan contra hordas de zombis en un mundo post-apocalíptico. Con un enfoque en el trabajo en equipo y una acción frenética, el juego ofrece una experiencia de supervivencia desafiante y llena de adrenalina.',
+                '179.99',
+                'https://image.api.playstation.com/vulcan/ap/rnd/202011/1900/2KSI75ZOtspSZZ4SKxCF9FAu.jpg',
+                'PS4',
+                'Acción y Aventura')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para Ghost-->
+        <div class="preview" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/30/ac/48/30ac487bc98bb07fbb4abb4feca4a8d4.jpg" alt="">
+            <h3>Ghost of Tsushima</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 132 )</span>
+            </div>
+            <p>Ghost of Tsushima es un juego de acción y aventura ambientado en
+                el Japón feudal durante la invasión mongola. Encarnas a Jin Sakai, un samurái que debe
+                romper sus tradiciones para proteger su tierra con honor y sigilo.</p>
+            <div class="price">S/. 199.00</div>
+            <div class="buttons">
+                <button class="buy-btn"
+                    onclick="addToCart('Ghost of Tsushima', 'Ghost of Tsushima es una épica aventura de mundo abierto ambientada en el Japón del siglo XIII durante la invasión mongola. Asumes el rol de Jin Sakai, un honorable samurái que debe adoptar tácticas furtivas y poco convencionales para proteger a su pueblo y recuperar su hogar.', '199.90', 'https://i.pinimg.com/736x/aa/65/be/aa65be39f98195b92ee2239b97c9866e.jpg', 'PS4', 'Acción y Aventura')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para Uncharted-->
+        <div class="preview" data-target="p-4">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/4b/ee/1e/4bee1e0fc85df97c041d29060ffbc977.jpg" alt="">
+            <h3>Uncharted 4: A Thief's End</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 132 )</span>
+            </div>
+            <p>Uncharted 4: A Thief's End es un juego de acción y aventura en
+                tercera persona que sigue a Nathan Drake, un cazador de tesoros retirado, mientras se ve
+                arrastrado a una última aventura para encontrar un antiguo tesoro. Con impresionantes
+                gráficos, una narrativa épica y mecánicas de juego fluidas, el título combina
+                exploración, resolución de acertijos y combates intensos en una experiencia
+                cinematográfica.</p>
+            <div class="price">S/. 159.00</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('Uncharted 4: A Thief´s End','Uncharted 4: A Thiefs End es un juego de acción y aventura en tercera persona que sigue a Nathan Drake, un cazador de tesoros retirado, mientras se ve arrastrado a una última aventura para encontrar un antiguo tesoro. Con impresionantes gráficos, una narrativa épica y mecánicas de juego fluidas, el título combina exploración, resolución de acertijos y combates intensos en una experiencia cinematográfica.',
+                '159.00',
+                'https://images.cdn1.buscalibre.com/fit-in/360x360/91/7c/917c1a310900c0e3ed5aa681f65bdd80.jpg',
+                'PS4',
+                'Acción y Aventura')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!--Modal Juegos de Deporte-->
+        <!-- Modal para EASports 25 -->
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/27/c7/14/27c71467a4e74dfa0a7ed0c482fe1d53.jpg" alt="">
+            <h3>FC 25</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 299 )</span>
+            </div>
+            <p>EA Sports FC 25 es la segunda entrega de la saga FC y se lanzó el
+                27 de septiembre de 2024 para consolas y PC. Incorpora mejoras en la jugabilidad como el
+                sistema táctico FC IQ, nuevos roles de jugador, un modo Rush 5v5 y mejoras en los
+                porteros, además de ampliar el contenido con más ligas femeninas y novedades en Ultimate
+                Team.</p>
+            <div class="price">S/. 259.90</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('EA Sports FC 25',
+                'EA Sports FC 25 es la segunda entrega de la saga FC y se lanzó el 27 de septiembre de 2024 para consolas y PC. Incorpora mejoras en la jugabilidad como el sistema táctico FC IQ, nuevos roles de jugador, un modo Rush 5v5 y mejoras en los porteros, además de ampliar el contenido con más ligas femeninas y novedades en Ultimate Team.',
+                '259.90',
+                'https://i.pinimg.com/736x/8f/03/72/8f03729fddcec4a4bbd8f0bcc66eff51.jpg',
+                'PS5',
+                'Deportes')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para F1 25 -->
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="https://vracingnews.de/media/31607-f1-25-ank%C3%BCndigung-2503-jpg/?thumbnail=large" alt="">
+            <h3>F1 25</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 299 )</span>
+            </div>
+            <p>F1 25 es un videojuego de carreras desarrollado por Codemasters y
+                publicado por EA Sports. Es la decimoctava entrada en la serie F1 y cuenta con la
+                licencia para los campeonatos de Fórmula Uno y Fórmula 2 de la temporada 2025.</p>
+            <div class="price">S/. 219.00</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('F1 25',
+                'F1 25 es un videojuego de carreras desarrollado por Codemasters y publicado por EA Sports. Es la decimoctava entrada en la serie F1 y cuenta con la licencia para los campeonatos de Fórmula Uno y Fórmula 2 de la temporada 2025.',
+                '219.00',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzroADdCKjPzQAQls2WRSbtH9uNBoMahKcgg&s',
+                'PS5',
+                'Deportes')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para 2K25 -->
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/97/72/79/9772794ac68cee5914caed4680973f97.jpg" alt="">
+            <h3>NBA 2K25</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 139 )</span>
+            </div>
+            <p>NBA 2K25 lleva la serie a un nuevo nivel con un realismo
+                impresionante en sus gráficos y movimientos, ofreciendo una jugabilidad mejorada tanto
+                en partidos individuales como en modos de carrera. Los jugadores pueden sumergirse en la
+                cultura del baloncesto, con modos que incluyen la NBA, el WNBA y la creación de un
+                jugador en modo MyCareer.</p>
+            <div class="price">S/. 160.00</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('NBA 2K25',
+                'NBA 2K25 lleva la serie a un nuevo nivel con un realismo impresionante en sus gráficos y movimientos, ofreciendo una jugabilidad mejorada tanto en partidos individuales como en modos de carrera. Los jugadores pueden sumergirse en la cultura del baloncesto, con modos que incluyen la NBA, el WNBA y la creación de un jugador en modo MyCareer.',
+                '160.00',
+                'https://sm.ign.com/t/ign_es/screenshot/default/nba-2k25-standard-edition-cover_621e.600.jpg',
+                'PS5',
+                'Deportes')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para GRAN TURISMO -->
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/52/6d/9b/526d9ba56acec0bf68bc28a8c52eba66.jpg" alt="">
+            <h3>Gran Turismo 7</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 275 )</span>
+            </div>
+            <p>Gran Turismo 7 ofrece una experiencia de simulación de conducción
+                inigualable con más de 400 coches, circuitos icónicos y un sistema de física avanzado.
+                Los jugadores pueden disfrutar de carreras tanto en modo campaña como en línea, con una
+                personalización profunda para cada vehículo y un enfoque realista en cada aspecto del
+                automovilismo.</p>
+            <div class="price">S/. 251.90</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('Gran Turismo 7',
+                'Gran Turismo 7 ofrece una experiencia de simulación de conducción inigualable con más de 400 coches, circuitos icónicos y un sistema de física avanzado. Los jugadores pueden disfrutar de carreras tanto en modo campaña como en línea, con una personalización profunda para cada vehículo y un enfoque realista en cada aspecto del automovilismo.',
+                '251.90',
+                'https://image.api.playstation.com/vulcan/ap/rnd/202109/1321/3mjMyRiJaq8lw1EFWiTCUJRV.png',
+                'PS4',
+                'Deportes')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+
+        <!--Modal Juegos de Lucha-->
+        <!-- Modal para MK1 -->
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="RECURSOS/mk1.jpg" alt="">
+            <h3>Mortal Kombat 1</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 299 )</span>
+            </div>
+            <p>Mortal Kombat 1 es un juego de lucha icónico que presenta combates
+                intensos y sangrientos entre personajes únicos con habilidades especiales. Los jugadores
+                deben dominar movimientos especiales, combos y los famosos fatalities para derrotar a
+                sus oponentes y obtener la victoria.</p>
+            <div class="price">S/. 149.00</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('Mortal Kombat 1',
+                'Mortal Kombat 1 es un juego de lucha icónico que presenta combates intensos y sangrientos entre personajes únicos con habilidades especiales. Los jugadores deben dominar movimientos especiales, combos y los famosos fatalities para derrotar a sus oponentes y obtener la victoria.',
+                '149.00',
+                'https://static.wikia.nocookie.net/mortalkombat/images/8/88/MK1_portada.jpg/revision/latest?cb=20230828165829&path-prefix=es',
+                'PS5',
+                'Lucha')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para Tekken 7 -->
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/1c/d4/fd/1cd4fdde3039555d52ab49e646eaad76.jpg" alt="">
+            <h3>Tekken 7</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 201 )</span>
+            </div>
+            <p>Tekken 7 es un juego de lucha de la famosa franquicia Tekken,
+                donde los jugadores eligen entre una amplia variedad de personajes para enfrentarse en
+                combates espectaculares. Con mecánicas de lucha profundas, combos devastadores y un modo
+                historia que explora los conflictos familiares, Tekken 7 ofrece una experiencia de lucha
+                emocionante y estratégica.</p>
+            <div class="price">S/. 120.00</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('Tekken 7',
+                'Tekken 7 es un juego de lucha de la famosa franquicia Tekken, donde los jugadores eligen entre una amplia variedad de personajes para enfrentarse en combates espectaculares. Con mecánicas de lucha profundas, combos devastadores y un modo historia que explora los conflictos familiares, Tekken 7 ofrece una experiencia de lucha emocionante y estratégica.',
+                '120.00',
+                'https://image.api.playstation.com/cdn/UP0700/CUSA05972_00/4yfeeKKfJdD5WzDQsoiM3xrcqPlpDLm7.png',
+                'PS4',
+                'Lucha'
+                )">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para Street Fighter -->
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/65/cd/51/65cd51dfa47ef1a9ac2ef9fa54f3aaca.jpg" alt="">
+            <h3>Street Fighter</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 120 )</span>
+            </div>
+            <p>Street Fighter es una serie de videojuegos de lucha clásica que se
+                centra en combates entre diversos luchadores con habilidades únicas y movimientos
+                especiales. Con su icónica mecánica de "hadouken" y otros ataques emblemáticos, Street
+                Fighter ha sido fundamental en la evolución de los juegos de lucha, ofreciendo batallas
+                emocionantes y competitivas.</p>
+            <div class="price">S/. 119.00</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('Street Fighter',
+                'Street Fighter es una serie de videojuegos de lucha clásica que se centra en combates entre diversos luchadores con habilidades únicas y movimientos especiales. Con su icónica mecánica de hadouken y otros ataques emblemáticos, Street Fighter ha sido fundamental en la evolución de los juegos de lucha, ofreciendo batallas emocionantes y competitivas.',
+                '119.00',
+                'https://img.asmedia.epimg.net/resizer/v2/https%3A%2F%2Fstatic.prisa.com%2Fgamepedia%2Fimagenes%2F2021%2F11%2F29%2Fcover%2F436927571638220597.jpg?auth=8dc9d058ebcbcc1563f475fcda644c67b8be3da9cd48d1b1689a86d4872e102b&width=140&height=210&smart=true',
+                'PS4',
+                'Lucha')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para MK11 -->
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/b7/b4/cf/b7b4cf8c56224c828b12d7e8ff7594f7.jpg" alt="">
+            <h3>Mortal Kombat 11</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 275 )</span>
+            </div>
+            <p>Mortal Kombat 11 es la entrega de la icónica saga de juegos
+                de lucha, conocida por sus combates sangrientos y sus personajes únicos. El juego ofrece
+                una jugabilidad mejorada, nuevos fatalities, y una historia que continúa explorando el
+                conflicto entre los campeones de la Tierra y los villanos interdimensionales, con un
+                enfoque en la personalización de los luchadores y el modo multijugador.</p>
+            <div class="price">S/. 155.80</div>
+            <div class="buttons">
+                <button class="buy-btn"
+                    onclick="addToCart('Mortal Kombat 11', 'Mortal Kombat 11 ofrece combates intensos con gráficos impresionantes, movimientos finales brutales y una narrativa cinematográfica envolvente. Personaliza luchadores, domina combos y enfréntate en épicas batallas tanto offline como en línea.', '155.80', 'https://i.pinimg.com/736x/1b/a3/ea/1ba3ea6ff3f49c631268573d56d6adae.jpg', 'PS4', 'Accion y Peleas')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+
+        <!--Modal Juegos de Supervivencia-->
+        <!-- Modal para Minecraft -->
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="RECURSOS/minecraft-games-posters-hd-wallpaper-preview.jpg" alt="">
+            <h3>Minecraft</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 299 )</span>
+            </div>
+            <p>Minecraft es un videojuego de construcción y aventura en un mundo
+                abierto, donde los jugadores pueden explorar, recolectar recursos, construir estructuras
+                y sobrevivir en un entorno generado aleatoriamente. Con su estilo visual de bloques y su
+                enfoque en la creatividad, Minecraft permite a los jugadores crear casi cualquier cosa
+                que imaginen, desde simples casas hasta complejos sistemas mecánicos, mientras enfrentan
+                desafíos como criaturas hostiles y cambios en el entorno.</p>
+            <div class="price">S/. 125.00</div>
+            <div class="buttons">
+                <button class="buy-btn"
+                    onclick="addToCart('Minecraft', 'Minecraft es un juego de construcción y aventura en mundo abierto donde puedes explorar, minar, crear y sobrevivir en mundos infinitos. Con gráficos pixelados y libertad total, fomenta la creatividad tanto en solitario como en modo multijugador.', '123.30', 'https://i.pinimg.com/474x/d2/45/9d/d2459de3246eb8a7d3504903d200f26c.jpg', 'PC', 'Aventura')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para Project zombie -->
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="/RECURSOS/capsule_616x353.jpg" alt="">
+            <h3>Project Zomboid</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 181 )</span>
+            </div>
+            <p>Project Zomboid es un juego de supervivencia en mundo abierto
+                ambientado en un apocalipsis zombi, donde el objetivo principal es resistir el mayor
+                tiempo posible antes de morir. Los jugadores deben gestionar recursos, construir
+                refugios, combatir zombis y cuidar su salud física y mental en un entorno hostil y
+                realista, donde cada decisión puede marcar la diferencia entre la vida y la
+                muerte.</p>
+            <div class="price">S/. 43.00</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('Project Zomboid',
+                'Project Zomboid es un juego de supervivencia en mundo abierto ambientado en un apocalipsis zombi, donde el objetivo principal es resistir el mayor tiempo posible antes de morir. Los jugadores deben gestionar recursos, construir refugios, combatir zombis y cuidar su salud física y mental en un entorno hostil y realista, donde cada decisión puede marcar la diferencia entre la vida y la muerte.',
+                '43.00',
+                'https://preview.redd.it/who-exactly-is-this-in-the-project-zomboid-cover-art-v0-zzo4ouqeep5d1.jpeg?width=1080&crop=smart&auto=webp&s=164d93faf9848971602c57366c358ae87072991e',
+                'PC',
+                'Supervivencia')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para Starder Valley -->
+        <div class="preview" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/74/ca/89/74ca89a99eadcaee94014c566fa0beac.jpg" alt="">
+            <h3>Stardew Valley</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>( 255 )</span>
+            </div>
+            <p>Stardew Valley es un juego de simulación de vida en el que los
+                jugadores heredan una granja y deben cultivarla, criar animales, pescar, minar y
+                construir relaciones con los habitantes del pueblo cercano. Con un enfoque relajante y
+                de exploración, el juego permite a los jugadores personalizar su granja, participar en
+                festivales, y descubrir secretos mientras mejoran sus habilidades.</p>
+            <div class="price">S/. 39.95</div>
+            <div class="buttons">
+                <button class="buy-btn" onclick="addToCart('Stardew Valley',
+                'Stardew Valley es un juego de simulación de vida en el que los jugadores heredan una granja y deben cultivarla, criar animales, pescar, minar y construir relaciones con los habitantes del pueblo cercano. Con un enfoque relajante y de exploración, el juego permite a los jugadores personalizar su granja, participar en festivales, y descubrir secretos mientras mejoran sus habilidades.',
+                '39.95',
+                'https://i.3djuegos.com/juegos/12908/stardew_valley/fotos/ficha/stardew_valley-3324716.jpg',
+                'PC',
+                'Supervivencia')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+        <!-- Modal para World War Z -->
+        <div class="preview" data-target="p-4">
+            <i class="fas fa-times"></i>
+            <img src="https://i.pinimg.com/736x/29/89/cc/2989cc7944c3825f03c51a7a8eab262a.jpg" alt="">
+            <h3>World War Z</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>( 275 )</span>
+            </div>
+            <p>World War Z es un juego de disparos en tercera persona
+                cooperativo, ambientado en un mundo invadido por hordas masivas de zombis rápidos y
+                agresivos. Los jugadores forman equipos para completar misiones en distintas partes del
+                mundo, utilizando armas, trampas y trabajo en equipo para sobrevivir a oleadas
+                implacables de enemigos.</p>
+            <div class="price">S/. 79.00</div>
+            <div class="buttons">
+                <button class="buy-btn"
+                    onclick="addToCart('World War Z: Aftermath', 'World War Z es un juego cooperativo de disparos en tercera persona donde los jugadores enfrentan hordas masivas de zombis en distintas partes del mundo.', '79.50', 'https://i.pinimg.com/736x/02/58/e7/0258e72b1eb0c41033ec469481b49912.jpg', 'PC', 'Terror y Acción')">
+                    <i class="fas fa-shopping-cart"></i> Comprar
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
+        <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook fa-sm"></i>
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp fa-sm"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                <i class="fa-brands fa-twitter fa-sm"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram fa-sm"></i>
+            </a>
+            <a href="https://web.telegram.org/k/" target="_blank" title="Telegram">
+                <i class="fa-brands fa-telegram fa-sm"></i>
+            </a>
+            <a href="http://www.discord.com" target="_blank" title="Discord">
+                <i class="fa-brands fa-discord fa-sm"></i>
+            </a>
+        </div>
+        <nav>
+            <a href="#">Política de Privacidad</a> |
+            <a href="#">Términos y Condiciones</a>
+        </nav>
+        <div class="payment-logos">
+            <div class="payment-logos">
+                <ul>
+                    <li><img src="/RECURSOS/image-removebg-preview.png" alt="Todos los logos"></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Carrito -->
+    <div id="modal-carrito" class="modal-carrito">
+        <div class="modal-contenido">
+            <div class="modal-icono">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <h2>Añadido al carrito</h2>
+            <div class="modal-botones">
+                <button class="modal-btn amarillo" id="btn-continuar">Continuar comprando</button>
+                <button class="modal-btn morado" id="btn-ver-carrito">Ver carrito</button>
+            </div>
+        </div>
+    </div>
+    <button id="modo-oscuro-btn" class="boton-flotante">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <script src="/javaScript/script.js"></script>
+    <script src="/javaScript/scriptCarrito.js"></script>
+    <script src="/javaScript/scriptModoOscuro.js"></script>
+    <script src="/javaScript/scriptModalIndex.js"></script>
+</body>
+
+</html>

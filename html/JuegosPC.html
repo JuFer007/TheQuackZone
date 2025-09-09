@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The QuackZone - PC</title>
+    <link rel="stylesheet" href="/css/stylePC.css">
+    <link rel="stylesheet" href="/css/styleModal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="/css/styleToast.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+        <div class="encabezado">
+            <!--ZONA IZQUIERDA DEL HEADER-->
+            <div class="encabezado-izquierda">
+                <div class="menu" id="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <!--ZONA CENTRO DEL HEADER-->
+            <div class="encabezado-centro">
+                <a href="/index.html" class="img1">
+                    <img src="/RECURSOS/logoPagina.png">
+                </a>
+            </div>
+            <!-- ZONA DERECHA DEL HEADER -->
+            <div class="encabezado-derecha">
+                <a href="#" class="action_btn" id="user-btn">
+                    <span id="user-icon"><i class="fa-solid fa-user"></i></span>
+                </a>
+                <a href="/html/Carrito.html" class="action_btn" onclick="actualizarContadorCarrito()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="contador-carrito">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="user-menu" id="user-menu">
+    <ul class="menu-list">
+      <li><a href="#" class="menu-MM" id="btn-cerrar"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar
+          Sesion</a></li>
+    </ul>
+  </div>
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <ion-icon name="home"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs5.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs4.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs3.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPC.html">
+                        <ion-icon name="desktop"></ion-icon>
+                        <span>PC</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+        <br>
+        <h1>¡Los más vendidos!</h1>
+        <div class="toast-container" id="toast"></div>
+        <div class="parent">
+            <div><img src="/RECURSOS/DARK SOULS.png" alt="DS3"></div>
+            <div><img src="https://i.pinimg.com/736x/45/dc/34/45dc347a687cc73b991d5da9a7708d2e.jpg"
+                    alt="COD black ops cold at war"></div>
+            <div><img src="https://i.pinimg.com/736x/88/03/e2/8803e2090ffd416e3e19abc1fcab7eda.jpg"
+                    alt="Assassin's Creed Valhalla"></div>
+            <div><img src="https://i.pinimg.com/736x/51/08/5d/51085df978980b6e34a614a555ff3c1b.jpg" alt="Cyberpunk">
+            </div>
+            <div><img src="https://i.pinimg.com/736x/fc/22/3f/fc223f554bf3d82ebc669e8e0ea2555b.jpg"
+                    alt="GTA San Andreas"></div>
+        </div>
+        <div class="contenedorCarrusel">
+            <div class="carrusel">
+                <div class="slides">
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/1366_2000.jpeg" alt="Cyberpunk">
+                            <div class="blur-content">
+                                <h3>Cyberpunk 2077</h3>
+                                <button onclick="addToCart('Cyberpunk 2077', 'Cyberpunk 2077 te transporta a Night City, una metrópolis futurista donde el poder, el estilo y la tecnología dominan, vive una historia intensa como V, un mercenario en busca de la inmortalidad en un mundo abierto lleno de caos y decisiones.', '291.10', '/RECURSOS/is-cyberpunk-cover-art-based-on-blade-runners-v0-p99esbve7sf81.png', 'PC', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/assassin-s-creed-valhalla-pc-juego-ubisoft-connect-europe-cover.jpg" alt="ASC Valhalla">
+                            <div class="blur-content">
+                                <h3>Assassin's Creed: Valhalla</h3>
+                                <button onclick="addToCart('Assassin´s Credd: Valhalla', 'Assassins Creed Valhalla te pone en la piel de Eivor, un guerrero vikingo en busca de gloria en tierras inglesas. Conquista, explora y forja alianzas en un mundo abierto lleno de batallas épicas y mitología nórdica.', '174.40', 'https://i5.walmartimages.com/seo/Assassins-Creed-Valhalla-Wall-Decor-Hidden-Blade-Bedroom-Poster-Gaming-Female-Viking-Eivor-Varinsdottir-Video-Game-Merchandise-Gamer-Art-Cool-Print-1_9b3e1409-43c6-40a7-ad0b-fc9057b3a81a.0dac4a415fce074d3120c44cb71e5f76.jpeg', 'PC', 'Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/call-of-duty-black-ops-cold-war-pc-spil-battle-net-cover.jpg" alt="COD Cold At War">
+                            <div class="blur-content">
+                                <h3>Call of Duty: Black Ops Cold At War</h3>
+                                <button onclick="addToCart('Call of Duty: Black Ops Cold At War', 'Call of Duty: Black Ops Cold War te sumerge en el caos de la Guerra Fría con una campaña cargada de espionaje y acción encubierta. Disfruta de intensos combates multijugador y el regreso del modo Zombis en una experiencia cinematográfica.', '291.10', 'https://i.pinimg.com/736x/2a/88/c7/2a88c79b4c82ffbca67a785528a228d3.jpg', 'PC', 'Shooter y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/710281.jpg" alt="RD7">
+                            <div class="blur-content">
+                                <h3>Resident Evil VII: Biohazard</h3>
+                                <button onclick="addToCart('Resident Evil VII: Biohazard', 'Resident Evil 7: Biohazard reinventa el terror con una experiencia en primera persona aterradora y visceral. Explora una mansión abandonada en Luisiana mientras luchas por sobrevivir a los horrores de la familia Baker.', '124.40', '/RECURSOS/cb5e306abef1ea10f4e9545eb8d7b94d.jpg', 'PC', 'Terror y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/gta-sa-4k-game-poster-9c5eui82x3dmftjp.jpg" alt="GTA San Andreas">
+                            <div class="blur-content">
+                                <h3>Grand Theft Auto: San Andreas</h3>
+                                <button onclick="addToCart('Grand Theft Auto: San Andreas', 'Grand Theft Auto: San Andreas (PS5) te lleva de regreso a los años 90 en una historia de crimen, traición y redención. Explora libremente ciudades, participa en misiones intensas y domina las calles como Carl Johnson (CJ).', '269.90', 'https://i.3djuegos.com/juegos/1012/grand_theft_auto_san_andreas/fotos/ficha/grand_theft_auto_san_andreas-3785649.jpg', 'PC', 'Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/wp3963353.jpg" alt="The Division 2">
+                            <div class="blur-content">
+                                <h3>Tom Clancy's: The Division 2</h3>
+                                <button onclick="addToCart('Tom Clancy’s: The Division 2', 'Tom Clancy’s The Division 2 te sitúa en un Washington D.C. colapsado, donde deberás restaurar el orden como agente de élite. Enfrenta a facciones enemigas en un mundo abierto lleno de acción táctica y cooperación multijugador.', '127.30', '/RECURSOS/cb5e306abef1ea10f4e9545eb8d7b94d.jpg', 'PC', 'Shooter Tactico y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+            </div>
+            <div class="carousel-dots"></div>
+        </div>
+    </section>
+    <main class="centrado">
+        <div class="juegos-wrapper">
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/5d/8a/41/5d8a41501af6aab5d2e754de44f58834.jpg"
+                        alt="The Witcher III" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>The Witcher III</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/5d/8a/41/5d8a41501af6aab5d2e754de44f58834.jpg"
+                            alt="The Witcher III" />
+                    </div>
+                    <div class="div2">
+                        <p>The Witcher 3: Wild Hunt, es un RPG de mundo abierto que sigue la historia de Geralt de
+                            Rivia, un cazador de monstruos en busca de su hija adoptiva en un mundo vasto y lleno de
+                            criaturas míticas. El juego destaca por su narrativa profunda, decisiones morales complejas
+                            y un sistema de combate dinámico.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Requisitos</th>
+                                    <th>Mínimo</th>
+                                    <th>Recomendado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sistema Operativo</td>
+                                    <td>Windows 7/8/10 (64 bits)</td>
+                                    <td>Windows 10 (64 bits)</td>
+                                </tr>
+                                <tr>
+                                    <td>Procesador</td>
+                                    <td>Intel Core i5-2500K / AMD Phenom II X4 940</td>
+                                    <td>Intel Core i7 3770 / AMD FX-8350</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>6 GB</td>
+                                    <td>8 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>Tarjeta Gráfica</td>
+                                    <td>NVIDIA GTX 660 / AMD Radeon HD 7870</td>
+                                    <td>NVIDIA GTX 770 / AMD Radeon R9 290</td>
+                                </tr>
+                                <tr>
+                                    <td>Espacio en disco</td>
+                                    <td colspan="2">35 GB disponibles</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('The Witcher III: Wild Hunt', 'The Witcher 3: Wild Hunt, es un RPG de mundo abierto que sigue la historia de Geralt de Rivia, un cazador de monstruos en busca de su hija adoptiva en un mundo vasto y lleno de criaturas míticas.', '124.50', 'https://i.pinimg.com/736x/5d/8a/41/5d8a41501af6aab5d2e754de44f58834.jpg', 'PC', 'Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/88/7a/6a/887a6a734f7eaa4f9bc10432f3e83e62.jpg"
+                        alt="Spiderman Miles Morales" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Spider-Man Miles Morales</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/88/7a/6a/887a6a734f7eaa4f9bc10432f3e83e62.jpg"
+                            alt="Spiderman Miles Morales" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Spider-Man: Miles Morales, Miles asume el manto de Spider-Man mientras enfrenta una nueva
+                            amenaza en Nueva York. Con poderes únicos como el Veneno y la invisibilidad, lucha por
+                            equilibrar su vida como adolescente y héroe en un mundo lleno de peligros.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Requisitos</th>
+                                    <th>Mínimo</th>
+                                    <th>Recomendado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sistema Operativo</td>
+                                    <td>Windows 10 (64 bits)</td>
+                                    <td>Windows 10/11 (64 bits)</td>
+                                </tr>
+                                <tr>
+                                    <td>Procesador</td>
+                                    <td>Intel Core i3-4160 / AMD equivalente</td>
+                                    <td>Intel Core i5-4670 / AMD Ryzen 5 1600</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>8 GB</td>
+                                    <td>16 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>Tarjeta Gráfica</td>
+                                    <td>NVIDIA GTX 950 / AMD Radeon RX 470</td>
+                                    <td>NVIDIA GTX 1060 6GB / AMD Radeon RX 580</td>
+                                </tr>
+                                <tr>
+                                    <td>Espacio en disco</td>
+                                    <td colspan="2">75 GB (SSD recomendado)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Spider-Man: Miles Morales', 'Spider-Man: Miles Morales, Miles asume el manto de Spider-Man mientras enfrenta una nueva amenaza en Nueva York.', '159.00', 'https://i.pinimg.com/736x/88/7a/6a/887a6a734f7eaa4f9bc10432f3e83e62.jpg', 'PC', 'Acción y Aventura')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="/RECURSOS/dark-souls-3-the-fire-fades-edition-519671.9.webp" alt="Dark Souls 3"
+                        class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Dark Souls III</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="/RECURSOS/dark-souls-3-the-fire-fades-edition-519671.9.webp" alt="Dark Souls 3"
+                            class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Dark Souls III es un juego de rol y acción en un mundo oscuro y decadente, donde los
+                            jugadores enfrentan enemigos implacables y jefes colosales mientras exploran ruinas llenas
+                            de secretos. Con una jugabilidad desafiante y atmósfera sombría, ofrece una experiencia
+                            intensa de combate, exploración y superación constante.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Requisitos</th>
+                                    <th>Mínimo</th>
+                                    <th>Recomendado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sistema Operativo</td>
+                                    <td>Windows 7 SP1 64-bit</td>
+                                    <td>Windows 10 64-bit</td>
+                                </tr>
+                                <tr>
+                                    <td>Procesador</td>
+                                    <td>Intel Core i3-2100 / AMD FX-6300</td>
+                                    <td>Intel Core i7-3770 / AMD FX-8350</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>4 GB</td>
+                                    <td>8 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>Tarjeta Gráfica</td>
+                                    <td>NVIDIA GeForce GTX 750 Ti / ATI Radeon HD 7950</td>
+                                    <td>NVIDIA GeForce GTX 970 / ATI Radeon R9 series</td>
+                                </tr>
+                                <tr>
+                                    <td>Espacio en disco</td>
+                                    <td colspan="2">25 GB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Dark Souls III', 'Dark Souls III es un juego de rol y acción en un mundo oscuro y decadente, donde los jugadores enfrentan enemigos implacables y jefes colosales mientras exploran ruinas llenas de secretos.', '166.30', '/RECURSOS/dark-souls-3-the-fire-fades-edition-519671.9.webp', 'PC', 'Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/04/c2/79/04c279b9557116d8e2d1e7db09cecbc3.jpg"
+                        alt="Cod modern warfare" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Call Of Duty: WWII</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/04/c2/79/04c279b9557116d8e2d1e7db09cecbc3.jpg"
+                            alt="Cod modern warfare" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Call of Duty: WWII es un videojuego de disparos en primera persona ambientado en la Segunda
+                            Guerra Mundial, desarrollado por Sledgehammer Games y publicado por Activision. El juego
+                            combina una intensa campaña histórica con modos multijugador competitivos y cooperativos,
+                            ofreciendo una experiencia realista y cinematográfica del conflicto.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Requisitos</th>
+                                    <th>Mínimo</th>
+                                    <th>Recomendado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sistema Operativo</td>
+                                    <td>Windows 7 64-Bit o posterior</td>
+                                    <td>Windows 10 64-Bit</td>
+                                </tr>
+                                <tr>
+                                    <td>Procesador</td>
+                                    <td>Intel Core i3-3225 / AMD Ryzen 5 1400</td>
+                                    <td>Intel Core i5-2400 / AMD Ryzen R5 1600X</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>8 GB</td>
+                                    <td>12 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>Tarjeta Gráfica</td>
+                                    <td>NVIDIA GeForce GTX 660 / AMD Radeon HD 7850</td>
+                                    <td>NVIDIA GeForce GTX 970 / GTX 1060 / AMD RX 580</td>
+                                </tr>
+                                <tr>
+                                    <td>Espacio en disco</td>
+                                    <td colspan="2">90 GB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Call Of Duty: WWII', 'Call of Duty: WWII es un videojuego de disparos en primera persona ambientado en la Segunda Guerra Mundial, desarrollado por Sledgehammer Games y publicado por Activision.', '88.90', 'https://i.pinimg.com/736x/04/c2/79/04c279b9557116d8e2d1e7db09cecbc3.jpg', 'PC', 'Shooter y Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="/RECURSOS/Gr-breakpoint-cover-art-digital-standard-edition-september-29-2021.webp"
+                        alt="Ghost Recon BreakPoint" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Ghost Recon: Break Point</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="/RECURSOS/Gr-breakpoint-cover-art-digital-standard-edition-september-29-2021.webp"
+                            alt="Ghost Recon BreakPoint" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Ghost Recon Breakpoint es un juego de disparos táctico en tercera persona desarrollado por
+                            Ubisoft, donde los jugadores asumen el rol de un soldado de élite atrapado tras las líneas
+                            enemigas en una isla controlada por excompañeros rebeldes.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Requisitos</th>
+                                    <th>Mínimo</th>
+                                    <th>Recomendado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sistema Operativo</td>
+                                    <td>Windows 7/8.1/10 (64 bits)</td>
+                                    <td>Windows 10 (64 bits)</td>
+                                </tr>
+                                <tr>
+                                    <td>Procesador</td>
+                                    <td>Intel Core i5-4460 / AMD FX-6330</td>
+                                    <td>Intel Core i7-6700K / AMD Ryzen 5 1600</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>8 GB</td>
+                                    <td>16 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>Tarjeta Gráfica</td>
+                                    <td>NVIDIA GeForce GTX 960 / AMD Radeon R9 280X</td>
+                                    <td>NVIDIA GeForce GTX 1060 / AMD Radeon RX 480</td>
+                                </tr>
+                                <tr>
+                                    <td>Espacio en disco</td>
+                                    <td colspan="2">67 GB (mejor con SSD)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Tom Clancy Ghost Recon: Breakpoint', 'Tom Clancy Ghost Recon: Breakpoint es un juego de disparos táctico en tercera persona, donde los jugadores asumen el rol de un soldado de élite atrapado tras las líneas enemigas en una isla.', '82.20', '/RECURSOS/Gr-breakpoint-cover-art-digital-standard-edition-september-29-2021.webp', 'PC', 'Acción y Aventura')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a8/Day_Z_cover.jpg" alt="DayZ"
+                        class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>DayZ</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a8/Day_Z_cover.jpg" alt="DayZ"
+                            class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>DayZ es un juego de supervivencia en mundo abierto donde los jugadores deben enfrentarse a un
+                            apocalipsis zombie, gestionar recursos como comida, agua y armas, y colaborar o competir con
+                            otros jugadores. El objetivo es sobrevivir el mayor tiempo posible en un entorno hostil.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Requisitos</th>
+                                    <th>Mínimo</th>
+                                    <th>Recomendado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sistema Operativo</td>
+                                    <td>Windows 7 64-bit</td>
+                                    <td>Windows 10 64-bit</td>
+                                </tr>
+                                <tr>
+                                    <td>Procesador</td>
+                                    <td>Intel Core i5-4430 / AMD FX-6300</td>
+                                    <td>Intel Core i7-6700K / AMD Ryzen 5 1600</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>8 GB</td>
+                                    <td>16 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>Tarjeta Gráfica</td>
+                                    <td>NVIDIA GeForce GTX 760 / AMD Radeon RX 470</td>
+                                    <td>NVIDIA GeForce GTX 1060 / AMD Radeon RX 580</td>
+                                </tr>
+                                <tr>
+                                    <td>Espacio en disco</td>
+                                    <td colspan="2">16 GB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('DayZ', 'DayZ es un juego de supervivencia en mundo abierto donde los jugadores deben enfrentarse a un apocalipsis zombie, gestionar recursos como comida, agua y armas, y colaborar o competir con otros jugadores.', '159.90', 'https://upload.wikimedia.org/wikipedia/en/a/a8/Day_Z_cover.jpg', 'PC', 'Acción y Aventura')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/93/6e/de/936ede59db263b989df1eec175d0181b.jpg"
+                        alt="Resident Evil Village" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Resident Evil Village</h2>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/93/6e/de/936ede59db263b989df1eec175d0181b.jpg"
+                            alt="Resident Evil Village" class="juego-img" />
+                    </div>
+                    <div class="div2">
+                        <p>Resident Evil Village es un survival horror en primera persona donde Ethan Winters debe
+                            enfrentar horrores sobrenaturales en un pueblo remoto lleno de criaturas aterradoras.
+                            Combinando acción intensa con exploración y acertijos, el juego ofrece una experiencia
+                            inmersiva y escalofriante.</p>
+                    </div>
+                    <div class="div3">
+                        <h4>Requisitos del Sistema</h4>
+                        <br>
+                        <table class="scroll" border="1" cellpadding="8" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Requisitos</th>
+                                    <th>Mínimo</th>
+                                    <th>Recomendado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sistema Operativo</td>
+                                    <td>Windows 10 (64 bits)</td>
+                                    <td>Windows 10 (64 bits)</td>
+                                </tr>
+                                <tr>
+                                    <td>Procesador</td>
+                                    <td>Intel Core i5-7500 / AMD Ryzen 3 1200</td>
+                                    <td>Intel Core i7-8700 / AMD Ryzen 5 3600</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>8 GB</td>
+                                    <td>16 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>Tarjeta Gráfica</td>
+                                    <td>NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 560</td>
+                                    <td>NVIDIA GeForce GTX 1070 / AMD Radeon RX 5700</td>
+                                </tr>
+                                <tr>
+                                    <td>Espacio en disco</td>
+                                    <td colspan="2">40 GB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Resident Evil Village', 'Resident Evil Village es un survival horror en primera persona donde Ethan Winters debe enfrentar horrores sobrenaturales en un pueblo remoto lleno de criaturas aterradoras.', '75.80', 'https://i.pinimg.com/736x/93/6e/de/936ede59db263b989df1eec175d0181b.jpg', 'PC', 'Acción y Terror')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+    
+    <footer>
+        <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
+        <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+        <br>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.telgram.com" target="_blank" title="Telegram">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a href="http://www.discord.com" target="_blank" title="Discord">
+                <i class="fa-brands fa-discord"></i>
+            </a>
+        </div>
+        <br>
+        <nav>
+            <a href="#">Política de Privacidad</a> |
+            <a href="#">Términos y Condiciones</a>
+        </nav>
+        <div class="payment-logos">
+            <div class="payment-logos">
+                <ul>
+                    <li><img src="/RECURSOS/image-removebg-preview.png" alt="Todos los logos"></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Carrito -->
+    <div id="modal-carrito" class="modal-carrito">
+        <div class="modal-contenido">
+            <div class="modal-icono">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <h2>Añadido al carrito</h2>
+            <div class="modal-botones">
+                <button class="modal-btn amarillo" id="btn-continuar">Continuar comprando</button>
+                <button class="modal-btn morado" id="btn-ver-carrito">Ver carrito</button>
+            </div>
+        </div>
+    </div>
+    <button id="modo-oscuro-btn" class="boton-flotante">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="/javaScript/script.js"></script>
+    <script src="/javaScript/scriptCarrito.js"></script>
+    <script src="/javaScript/scriptModoOscuro.js"></script>
+    <script src="/javaScript/scriptCarrusel.js"></script>
+    <script src="/javaScript/scriptFormulario.js"></script>
+</body>
+</html>

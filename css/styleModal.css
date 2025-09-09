@@ -1,0 +1,92 @@
+/* Modal Carrito - botones naranja claro, ícono mantiene color original */
+.modal-carrito {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(20, 20, 20, 0.87);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-carrito.activo {
+    display: flex;
+}
+
+.modal-contenido {
+    background: #232323;
+    color: #fff;
+    padding: 40px 48px;
+    border-radius: 28px;
+    text-align: center;
+    min-width: 340px;
+    box-shadow: 0 0 48px #171717cc;
+    position: relative;
+    border: none;
+    max-width: 96vw;
+}
+
+.modal-contenido h2 {
+    font-family: 'Press Start 2P', system-ui, monospace;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 12px #00000088;
+}
+
+.modal-icono i {
+    color: #ee6612;
+    font-size: 60px;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 12px #000000aa;
+}
+
+.modal-botones {
+    margin-top: 30px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.modal-btn {
+    padding: 13px 40px;
+    border: none;
+    border-radius: 14px;
+    font-size: 18.5px;
+    font-family: "Special Gothic Condensed One", Arial, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 10px #0002;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
+    color: #111;
+}
+
+.modal-btn:hover {
+    background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
+    color: #111;
+    scale: max(0.95, 0.95, 0.95);
+}
+
+.modal-btn.amarillo,
+.modal-btn.morado {
+    background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
+    color: #111;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    .modal-contenido {
+        padding: 20px 5vw;
+        min-width: 0;
+    }
+    .modal-btn {
+        padding: 12px 14px;
+        font-size: 1em;
+    }
+}

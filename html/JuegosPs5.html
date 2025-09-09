@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>The QuackZone - PS5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleGen.css">
+    <link rel="stylesheet" href="/css/styleModal.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="/css/styleToast.css">
+</head>
+<body>
+<!--ENCABEZADO-->
+<div class="wrapper">
+    <header>
+        <div class="encabezado">
+            <!--ZONA IZQUIERDA DEL HEADER-->
+            <div class="encabezado-izquierda">
+                <div class="menu" id="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <!--ZONA CENTRO DEL HEADER-->
+            <div class="encabezado-centro">
+                <a href="/index.html" class="img1">
+                    <img src="/RECURSOS/logoPagina.png">
+                </a>
+            </div>
+            <!-- ZONA DERECHA DEL HEADER -->
+            <div class="encabezado-derecha">
+                <a href="#" class="action_btn" id="user-btn">
+                    <span id="user-icon"><i class="fa-solid fa-user"></i></span>
+                </a>
+                <a href="/html/Carrito.html" class="action_btn" onclick="actualizarContadorCarrito()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="contador-carrito">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="user-menu" id="user-menu">
+        <ul class="menu-list">
+            <li><a href="#" class="menu-MM" id="btn-cerrar"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar
+                    Sesion</a></li>
+        </ul>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <ion-icon name="home"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs5.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs4.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs3.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPC.html">
+                        <ion-icon name="desktop"></ion-icon>
+                        <span>PC</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+    <br>
+    <h1>¡Los juegos más destacados para PS5!</h1>
+    <div class="toast-container" id="toast"></div>
+    <div class="parent">
+        <div><img src="https://i.pinimg.com/736x/43/e1/96/43e196e0bbd74c024da5ace500f46133.jpg" alt="COD MW2"></div>
+        <div><img src="https://i.pinimg.com/736x/09/73/6e/09736eed93c1357f6d1c5bd0576c4e5b.jpg" alt="God of War Ragnarok"></div>
+        <div><img src="https://i.pinimg.com/736x/e8/5e/40/e85e4038c36960d170eea1f9ca5823a2.jpg" alt="The last of us"></div>
+        <div><img src="https://i.pinimg.com/736x/2c/5a/b1/2c5ab109e0e9886e8cdd571a2c126da9.jpg" alt="Resident Evil 2"></div>
+        <div><img src="https://i.pinimg.com/736x/7a/46/7b/7a467bb48d0ee345a1b253981a414223.jpg" alt="GTA 5"></div>
+    </div>
+    <div class="contenedorCarrusel">
+        <div class="carrusel">
+            <div class="slides">
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="/RECURSOS/Imagen_PS5_Carrusel.jpg" alt="modernwarfare 2">
+                        <div class="blur-content">
+                            <h3>Call of Duty: Modern Warfare II</h3>
+                            <button onclick="addToCart('Call of Duty: Modern Warfare II', 'Call of Duty: Modern Warfare 2, te sumerge en combates tácticos intensos con gráficos de última generación y una campaña cinematográfica.', '165.50', 'https://i.3djuegos.com/juegos/18491/call_of_duty_modern_warfare_2/fotos/ficha/call_of_duty_modern_warfare_2-5754880.webp', 'PS5', 'Shooter y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="https://www.gameplayscassi.com.br/ofertas/wp-content/uploads/2025/01/The-Last-of-Us-Part-II-Remastered.jpg" alt="the last of us 2">
+                        <div class="blur-content">
+                            <h3>The Last of Us Parte II Remastered</h3>
+                            <button onclick="addToCart('The Last of Us Parte II', 'The Last of Us Parte II es una obra maestra narrativa que combina emoción, tensión, a través de Ellie, vivirás una travesía cruda y poderosa en un mundo devastado por la pérdida y la venganza.', '159.50', '/RECURSOS/Part_II_Remastered_cover_art.webp', 'PS5', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="/RECURSOS/god-war-ragnarok-2466115.png" alt="god of war">
+                        <div class="blur-content">
+                            <h3>God of War Ragnarök</h3>
+                            <button onclick="addToCart('God of War Ragnarök', 'God of War: Ragnarök eleva la saga a nuevas alturas con combates épicos, paisajes nórdicos impresionantes y una narrativa profundamente emotiva. Acompaña a Kratos y Atreus en su lucha contra el destino mientras el fin de los dioses se aproxima.', '182.20', 'https://image.api.playstation.com/vulcan/ap/rnd/202207/1117/CyWGhpXfSmIcuecOFXG841JE.png', 'PS5', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="https://i.blogs.es/6a071d/gtav/1366_2000.jpg" alt="gta 5">
+                        <div class="blur-content">
+                            <h3>Grand Theft Auto V</h3>
+                            <button onclick="addToCart('Grand Theft Auto V', 'Grand Theft Auto V te sumerge en el caótico y vibrante mundo de Los Santos con gráficos mejorados y una jugabilidad fluida. Vive una historia criminal épica a través de tres personajes únicos en un mundo abierto lleno de acción y libertad.', '124.40', 'https://thegamekeys.in/wp-content/uploads/2023/08/71uizbdZ5dL.jpg', 'PS5', 'Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="blur-container">
+                        <img src="/RECURSOS/2x1_NSwitchDS_ResidentEvil2Cloud.jpg" alt="resident evil 2">
+                        <div class="blur-content">
+                            <h3>Resident Evil 2</h3>
+                            <button onclick="addToCart('Resident Evil 2', 'Resident Evil 2 es una reinvención del clásico de 1998, con gráficos modernos y una atmósfera opresiva que revive el terror en Raccoon City. Acompaña a Leon y Claire en una desesperada lucha por sobrevivir al apocalipsis zombi.', '95.50', 'https://m.media-amazon.com/images/M/MV5BNDFhYjRjMzQtNDQxMC00ODMyLWJjZmItOTM1MWVhYjRmZTA5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'PS5', 'Terror y Accion')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+            <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+        </div>
+        <div class="carousel-dots"></div>
+    </div>
+</section>
+<main class="centrado">
+    <article>
+        <div class="juegos-wrapper">
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="/RECURSOS/gta6.jpeg" alt="GTA 6" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Grand Theft Auto VI</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Jason y Lucia siempre han sabido que las cartas estaban en su contra, pero cuando un golpe que parecía fácil sale mal, se ven atrapados en el lado más oscuro del lugar más soleado de América, en medio de una conspiración criminal que se extiende por todo el estado de Leonida, y obligados a depender más que nunca el uno del otro si quieren salir con vida.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/f9/89/52/f98952415b4478d46ac7255da95b9f36.jpg" alt="Spiderman 2" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/l6RRdTFuepk" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart('Grand Thef Auto VI', 'Jason y Lucia siempre han sabido que las cartas estaban en su contra, pero cuando un golpe que parecía fácil sale mal, se ven atrapados en el lado más oscuro del lugar más soleado de América.', '260.20', '/RECURSOS/gta6.jpeg', 'PS5', 'Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/a0/7e/eb/a07eeb846f05daa0554bdfd609f3fcb7.jpg" alt="Spiderman 2" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Spider-Man 2</h2>
+                    </div>
+                    <div class="div2">
+                        <p>En Spider-Man 2, Miles Morales lucha junto a Peter Parker para proteger Nueva York de amenazas como Venom y Kraven el Cazador. A medida que enfrenta nuevos desafíos, Miles madura como héroe y fortalece sus poderes únicos.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/a0/7e/eb/a07eeb846f05daa0554bdfd609f3fcb7.jpg" alt="Spiderman 2" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/rCIV0y8jNy4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart('Spider-Man 2', 'Miles Morales lucha junto a Peter Parker para proteger Nueva York de amenazas como Venom y Kraven el Cazador.', '159.20', 'https://i.pinimg.com/736x/a0/7e/eb/a07eeb846f05daa0554bdfd609f3fcb7.jpg', 'PS5', 'Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="/RECURSOS/The_Texas_Chain_Saw_Massacre_(2023)_cover.jpg" alt="Masacre de Thexas" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>The Texas Chain Saw Massacre</h2>
+                    </div>
+                    <div class="div2">
+                        <p>The Texas Chain Saw Massacre es un juego de terror multijugador asimétrico donde un grupo de víctimas intenta escapar de la familia Slaughter, incluyendo al icónico Leatherface. Los jugadores deben usar el sigilo, la estrategia y el trabajo en equipo para sobrevivir o, si juegan como la familia, para atrapar y eliminar a las víctimas antes de que escapen.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="/RECURSOS/The_Texas_Chain_Saw_Massacre_(2023)_cover.jpg" alt="The Texas Chain Saw Massacre" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/jxbEynEDY7Q" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart('The Texas Chain Saw Massacre', 'The Texas Chain Saw Massacre es un juego de terror multijugador asimétrico donde un grupo de víctimas intenta escapar de la familia Slaughter, incluyendo al icónico Leatherface.', '70.90', '/RECURSOS/The_Texas_Chain_Saw_Massacre_(2023)_cover.jpg', 'PS5', 'Terror')">
+                            <i class="fas fa-shopping-cart"></i> Compra
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/b0/c6/f7/b0c6f7eb4603ebcf0ac6b5fbee59c84a.jpg" alt="Uncharted" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Uncharted Legacy of Thieves</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Uncharted: Legacy of Thieves Collection es una remasterización para PC y PS5 que incluye Uncharted 4: A Thief’s End y Uncharted: The Lost Legacy. Ofrece acción cinematográfica, exploración exótica y combates intensos con gráficos mejorados y tiempos de carga reducidos.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/31/1f/48/311f486a1d0d77951ab5a61cffa25749.jpg" alt="Uncharted" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/F3Wl-OiZCO4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart('Uncharted Legacy of Thieves', 'Uncharted: Legacy of Thieves Collection es una remasterización para PC y PS5 que incluye Uncharted 4: A Thief’s End y Uncharted: The Lost Legacy.', '159.00', 'https://i.pinimg.com/736x/b0/c6/f7/b0c6f7eb4603ebcf0ac6b5fbee59c84a.jpg', 'PS5', 'Aventura')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="/RECURSOS/6e68a063c8a4a0931b1463cd6fbc350e.jpg" alt="cold at war" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Dying Light: The Beast</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Dying Light: The Beast es un videojuego de acción y aventuras en primera persona. El juego se ambienta en Castor Woods, un popular destino turístico rural invadido por zombis. Los jugadores pueden explorar este mundo abierto usando las habilidades de parkour de Crane o conduciendo un vehículo 4x4.
+                        </p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="/RECURSOS/6e68a063c8a4a0931b1463cd6fbc350e.jpg" alt="cold at war" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/M0GCr2P9510" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart('Dyin Light: The Beast', 'Dying Light: The Beast es un videojuego de acción y aventuras en primera persona. El juego se ambienta en Castor Woods, un popular destino turístico rural invadido por zombis.', '311.20', '/RECURSOS/6e68a063c8a4a0931b1463cd6fbc350e.jpg', 'PS5', 'Terror y Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/02/58/e7/0258e72b1eb0c41033ec469481b49912.jpg" alt="WWZ" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>World War Z: Aftermath</h2>
+                    </div>
+                    <div class="div2">
+                        <p>World War Z es un juego cooperativo de disparos en tercera persona donde los jugadores enfrentan hordas masivas de zombis en distintas partes del mundo. Inspirado en la película del mismo nombre, ofrece misiones intensas, clases personalizables y un enfoque en el trabajo en equipo para sobrevivir.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/02/58/e7/0258e72b1eb0c41033ec469481b49912.jpg" alt="The Witcher III" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/kH2Mrz25Opk" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn" onclick="addToCart('World War Z: Aftermath', 'World War Z es un juego cooperativo de disparos en tercera persona donde los jugadores enfrentan hordas masivas de zombis en distintas partes del mundo.', '79.50', 'https://i.pinimg.com/736x/02/58/e7/0258e72b1eb0c41033ec469481b49912.jpg', 'PS5', 'Terror y Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+</div>
+
+<!--CUERPO-->
+
+<!--FOOTER-->
+<footer>
+    <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
+    <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+    <br>
+    <div class="social-icons" >
+        <a href="https://www.facebook.com" target="_blank" title="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" title="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.telgram.com" target="_blank" title="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="http://www.discord.com" target="_blank" title="Discord">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+    </div>
+    <br>
+    <nav>
+        <a href="#">Política de Privacidad</a> |
+        <a href="#">Términos y Condiciones</a>
+    </nav>
+    <div class="payment-logos">
+        <div class="payment-logos">
+            <ul>
+                <li><img src="/RECURSOS/image-removebg-preview.png" alt="Todos los logos"></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- Modal Carrito -->
+<div id="modal-carrito" class="modal-carrito">
+    <div class="modal-contenido">
+        <div class="modal-icono">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <h2>Añadido al carrito</h2>
+        <div class="modal-botones">
+            <button class="modal-btn amarillo" id="btn-continuar">Continuar comprando</button>
+            <button class="modal-btn morado" id="btn-ver-carrito">Ver carrito</button>
+        </div>
+    </div>
+</div>
+    <button id="modo-oscuro-btn" class="boton-flotante">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="/javaScript/script.js"></script>
+<script src="/javaScript/scriptCarrito.js"></script>
+<script src="/javaScript/scriptModoOscuro.js"></script>
+<script src="/javaScript/scriptCarrusel.js"></script>
+</body>
+</html>

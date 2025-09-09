@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The QuackZone - PS4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleGen.css">
+    <link rel="stylesheet" href="/css/styleModal.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="/css/styleToast.css">
+</head>
+
+<body>
+    <!--ENCABEZADO-->
+    <header>
+        <div class="encabezado">
+            <!--ZONA IZQUIERDA DEL HEADER-->
+            <div class="encabezado-izquierda">
+                <div class="menu" id="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <!--ZONA CENTRO DEL HEADER-->
+            <div class="encabezado-centro">
+                <a href="/index.html" class="img1">
+                    <img src="/RECURSOS/logoPagina.png">
+                </a>
+            </div>
+            <!-- ZONA DERECHA DEL HEADER -->
+            <div class="encabezado-derecha">
+                <a href="#" class="action_btn" id="user-btn">
+                    <span id="user-icon"><i class="fa-solid fa-user"></i></span>
+                </a>
+                <a href="/html/Carrito.html" class="action_btn" onclick="actualizarContadorCarrito()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="contador-carrito">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="user-menu" id="user-menu">
+    <ul class="menu-list">
+      <li><a href="#" class="menu-MM" id="btn-cerrar"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar
+          Sesion</a></li>
+    </ul>
+  </div>
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <ion-icon name="home"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs5.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs4.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPs3.html">
+                        <ion-icon name="logo-game-controller-b"></ion-icon>
+                        <span>PS3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/JuegosPC.html">
+                        <ion-icon name="desktop"></ion-icon>
+                        <span>PC</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+        <br>
+        <h1>¡Los mejores videojugos de PS4!</h1>
+        <div class="toast-container" id="toast"></div>
+        <div class="parent">
+            <div><img src="/RECURSOS/HD-wallpaper-uncharted-4-a-thiefs-end-games.jpg" alt="UNCHARTED 4"></div>
+            <div><img src="https://i.pinimg.com/736x/52/ed/b1/52edb1d00e91dc0136e66ab5da48feff.jpg" alt="God of War 4">
+            </div>
+            <div><img src="/RECURSOS/FIFA_20_Regular_Edition.webp" alt="Fifa 20"></div>
+            <div><img src="https://i.pinimg.com/474x/28/ee/91/28ee919632118489abc82ca609946cd3.jpg" alt="ASC"></div>
+            <div><img src="https://i.pinimg.com/736x/01/5f/8a/015f8ae668ced414facea4512aa55c56.jpg" alt="INJUSTICE 2">
+            </div>
+        </div>
+        <div class="contenedorCarrusel">
+            <div class="carrusel">
+                <div class="slides">
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="https://cdn1.epicgames.com/offer/0c40923dd1174a768f732a3b013dcff2/EGS_TheLastofUsPartI_NaughtyDogLLC_S1_2560x1440-3659b5fe340f8fc073257975b20b7f84" alt="The last of us parte 1">
+                            <div class="blur-content">
+                                <h3>The Last of Us Parte I</h3>
+                                <button onclick="addToCart('The Last of Us Parte I', 'The Last of Us es una aventura emocional y postapocalíptica donde Joel y Ellie luchan por sobrevivir en un mundo devastado. Con una narrativa profunda, sigilo, acción y vínculos humanos, redefine el género de los juegos narrativos.', '140.80', '/RECURSOS/Portada_Parte_I_R_limpia.webp', 'PS4', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/Diseño sin título.png" alt="Elden Ring">
+                            <div class="blur-content">
+                                <h3>Elden Ring</h3>
+                                <button onclick="addToCart('Elden Ring', 'Elden Ring es un RPG de acción en mundo abierto creado por FromSoftware y George R.R. Martin, donde explorarás Las Tierras Intermedias enfrentando desafiantes enemigos. Con combates exigentes, libertad total y una narrativa oscura, es una aventura épica y envolvente.', '175.80', 'https://p325k7wa.twic.pics/high/elden-ring/elden-ring/03-news/ER-Logo-keyart-23may.jpg?twic=v1/cover=500x556/step=10/quality=80', 'PS4', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/red-dead-redemption-2-desktop-6l9sm1fd0wc2ibs0.jpg" alt="RRD2">
+                            <div class="blur-content">
+                                <h3>Red Dead Redeption 2</h3>
+                                <button onclick="addToCart('Red Dead Redeption 2', 'Red Dead Redemption 2 te transporta al salvaje oeste como Arthur Morgan, un forajido que lucha por sobrevivir mientras su banda se desmorona. Con un mundo abierto inmersivo, historia profunda y jugabilidad detallada, es una obra maestra del western interactivo.', '249.80', 'https://i.blogs.es/juegos/13424/red_dead_3__nombre_temporal_/fotos/maestras/red_dead_3__nombre_temporal_-4030936.jpg', 'PS4', 'Accion y Aventura')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/1006970.jpg" alt="MK11">
+                            <div class="blur-content">
+                                <h3>Mortal Kombat 11</h3>
+                                <button onclick="addToCart('Mortal Kombat 11', 'Mortal Kombat 11 ofrece combates intensos con gráficos impresionantes, movimientos finales brutales y una narrativa cinematográfica envolvente. Personaliza luchadores, domina combos y enfréntate en épicas batallas tanto offline como en línea.', '155.80', 'https://i.pinimg.com/736x/1b/a3/ea/1ba3ea6ff3f49c631268573d56d6adae.jpg', 'PS4', 'Accion y Peleas')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="blur-container">
+                            <img src="/RECURSOS/spiderman-wallpaper-desktop-04-zz-11apr18.jpg" alt="Spiderman">
+                            <div class="blur-content">
+                                <h3>Marvel's Spider-Man</h3>
+                                <button onclick="addToCart('Marvel’s Spider-Man', 'Marvel’s Spider-Man te pone en la piel de Peter Parker en un mundo abierto lleno de acción, con una historia profunda y emocionante. Surca los cielos de Nueva York con movimientos ágiles, combate el crimen y enfréntate a icónicos villanos del universo Marvel.', '198.80', 'https://i.pinimg.com/736x/72/5f/a7/725fa73cc2577e67713e0291bdd5266b.jpg', 'PS4', 'Accion y Peleas')"><i class="fas fa-shopping-cart"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+            </div>
+            <div class="carousel-dots"></div>
+        </div>
+    </section>
+    <main class="centrado">
+        <div class="juegos-wrapper">
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/aa/65/be/aa65be39f98195b92ee2239b97c9866e.jpg"
+                        alt="Ghost Of Tsushima" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Ghost of Tsushima</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Ghost of Tsushima es una épica aventura de mundo abierto ambientada en el Japón del siglo XIII durante la invasión mongola. Asumes el rol de Jin Sakai, un honorable samurái que debe adoptar tácticas furtivas y poco convencionales para proteger a su pueblo y recuperar su hogar. A lo largo del juego, vivirás intensos combates con katana, exploración libre por paisajes impresionantes y una historia emocional.
+                        </p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/aa/65/be/aa65be39f98195b92ee2239b97c9866e.jpg"
+                            alt="Ghost of Tsushima" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/iqysmS4lxwQ" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Ghost of Tsushima', 'Ghost of Tsushima es una épica aventura de mundo abierto ambientada en el Japón del siglo XIII durante la invasión mongola. Asumes el rol de Jin Sakai, un honorable samurái que debe adoptar tácticas furtivas y poco convencionales para proteger a su pueblo y recuperar su hogar.', '199.90', 'https://i.pinimg.com/736x/aa/65/be/aa65be39f98195b92ee2239b97c9866e.jpg', 'PS4', 'Acción y Aventura')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/8f/09/1a/8f091a8e96b33554bc1e9fdc3dad79da.jpg" alt="MK XL"
+                        class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Mortal Kombat XL</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Mortal Kombat XL es una versión expandida que incluye todos los personajes y contenidos
+                            descargables (DLC). Ofrece combates brutales, cinemáticas espectaculares y los clásicos
+                            fatalities en intensas peleas uno contra uno.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/8f/09/1a/8f091a8e96b33554bc1e9fdc3dad79da.jpg" alt="MK XL"
+                            class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/j-Wcb2oCJYU" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Mortal Kombat XL', 'Mortal Kombat XL es una versión expandida que incluye todos los personajes y contenidos descargables (DLC). Ofrece combates brutales, cinemáticas espectaculares y los clásicos fatalities en intensas peleas uno contra uno.', '83.10', 'https://i.pinimg.com/736x/8f/09/1a/8f091a8e96b33554bc1e9fdc3dad79da.jpg', 'PS4', 'Peleas y Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/a9/48/ec/a948ecc2b0578638c7aa292282f64e9e.jpg" alt="Uncharted"
+                        class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Uncharted: The Natan Drake</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Uncharted: The Nathan Drake Collection es una remasterización para PS4 que reúne los tres
+                            primeros juegos de la saga (Drake's Fortune, Among Thieves y Drake's Deception). Presenta
+                            mejoras gráficas, rendimiento optimizado y una experiencia renovada de las aventuras
+                            clásicas de Nathan Drake.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/a9/48/ec/a948ecc2b0578638c7aa292282f64e9e.jpg"
+                            alt="Uncharted" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/-mH2SVyBMAQ" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Uncharted: The Nathan Drake Collection', 'Uncharted: The Nathan Drake Collection es una remasterización para PS4 que reúne los tres primeros juegos de la saga (Drake\'s Fortune, Among Thieves y Drake\'s Deception).', '101.70', 'https://i.pinimg.com/736x/a9/48/ec/a948ecc2b0578638c7aa292282f64e9e.jpg', 'PS4', 'Aventura')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="https://i.pinimg.com/736x/f0/84/bc/f084bc343c6e574c9ba4f795581cf80f.jpg"
+                        alt="Dragon Ball Xenoverse" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Dragon Ball: Xenoverse 2</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Dragon Ball Xenoverse es un juego de lucha y rol en el que los jugadores crean su propio
+                            personaje para viajar en el tiempo y corregir eventos alterados del universo Dragon Ball.
+                            Combina combates dinámicos en 3D con una historia original que recorre momentos clave del
+                            anime.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="https://i.pinimg.com/736x/f0/84/bc/f084bc343c6e574c9ba4f795581cf80f.jpg"
+                            alt="Dragon Ball Xenoverse" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/mImC9oinZDs" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Dragon Ball: Xenoverse 2', 'Dragon Ball Xenoverse es un juego de lucha y rol en el que los jugadores crean su propio personaje para viajar en el tiempo y corregir eventos alterados del universo Dragon Ball.', '70.20', 'https://i.pinimg.com/736x/f0/84/bc/f084bc343c6e574c9ba4f795581cf80f.jpg', 'PS4', 'Peleas')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="section1">
+                    <img src="/RECURSOS/d87c50637525a8e155c891dadacb8a15 (1).jpg" alt="Thief" class="juego-img" />
+                </div>
+                <div class="derecha">
+                    <div class="div1">
+                        <h2>Thief: Remastered</h2>
+                    </div>
+                    <div class="div2">
+                        <p>Thief es un juego de sigilo en primera persona donde asumes el papel de Garrett, un maestro
+                            ladrón que se mueve por una ciudad oscura y corrupta llena de secretos. Usando habilidades
+                            de infiltración, herramientas especializadas y astucia, debes robar sin ser visto y
+                            descubrir una conspiración que amenaza el equilibrio del poder.</p>
+                    </div>
+                    <div class="section2" hidden>
+                        <img src="/RECURSOS/d87c50637525a8e155c891dadacb8a15 (1).jpg" alt="Thief" class="juego-img" />
+                    </div>
+                    <div class="div3">
+                        <iframe class="video-juego" src="https://www.youtube.com/embed/83tF5EKdT5c" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="div4">
+                        <br>
+                        <button class="buy-btn"
+                            onclick="addToCart('Thief', 'Thief es un juego de sigilo en primera persona donde asumes el papel de Garrett, un maestro ladrón que se mueve por una ciudad oscura y corrupta llena de secretos.', '60.50', '/RECURSOS/d87c50637525a8e155c891dadacb8a15 (1).jpg', 'PS4', 'Acción')">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Modal Carrito -->
+    <div id="modal-carrito" class="modal-carrito">
+        <div class="modal-contenido">
+            <div class="modal-icono">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <h2>Añadido al carrito</h2>
+            <div class="modal-botones">
+                <button class="modal-btn amarillo" id="btn-continuar">Continuar comprando</button>
+                <button class="modal-btn morado" id="btn-ver-carrito">Ver carrito</button>
+            </div>
+        </div>
+    </div>
+</body>
+<!--CUERPO-->
+
+<!--FOOTER-->
+<footer>
+    <p>The QuackZone – Donde el cuac se convierte en GG. 🦆</p>
+    <p>&copy; 2025 The QuackZone. Todos los derechos reservados.</p>
+    <br>
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" title="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" title="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.telgram.com" target="_blank" title="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="http://www.discord.com" target="_blank" title="Discord">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+    </div>
+    <br>
+    <nav>
+        <a href="#">Política de Privacidad</a> |
+        <a href="#">Términos y Condiciones</a>
+    </nav>
+    <div class="payment-logos">
+        <div class="payment-logos">
+            <ul>
+                <li><img src="/RECURSOS/image-removebg-preview.png" alt="Todos los logos"></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<button id="modo-oscuro-btn" class="boton-flotante">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="/javaScript/script.js"></script>
+<script src="/javaScript/scriptCarrito.js"></script>
+<script src="/javaScript/scriptModoOscuro.js"></script>
+<script src="/javaScript/scriptCarrusel.js"></script>
+</html>
