@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Deseos | The QuackZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #191919;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #2d2d2d;
+            padding: 0 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1300px;
+        }
+
+        .logo {
+            color: #ff6300;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .back-btn {
+            background: rgba(255, 99, 0, 0.1);
+            border: 2px solid #ff6300;
+            color: #ff6300;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .back-btn:hover {
+            background: #ff6300;
+            color: black;
+        }
+
+        /* CONTAINER */
+        .wishlist-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            margin-bottom: 30px;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .page-title i {
+            color: #ff6300;
+        }
+
+        .page-subtitle {
+            color: #888;
+            font-size: 1.1rem;
+        }
+
+        /* WISHLIST GRID */
+        .wishlist-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .wishlist-item {
+            background: linear-gradient(145deg, #252525 0%, #1a1a1a 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            display: flex;
+            height: 200px;
+        }
+
+        .wishlist-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 99, 0, 0.5);
+        }
+
+        .wishlist-image {
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .wishlist-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        .wishlist-info {
+            flex: 1;
+        }
+
+        .wishlist-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .wishlist-platform {
+            display: inline-block;
+            background: rgba(255, 99, 0, 0.2);
+            color: #ff6300;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .wishlist-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6300;
+            margin-top: 10px;
+        }
+
+        .wishlist-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .add-cart-btn, .remove-wishlist-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 1rem;
+        }
+
+        .add-cart-btn {
+            background: #ff6300;
+            color: white;
+        }
+
+        .add-cart-btn:hover {
+            background: #ff7e2e;
+            transform: scale(1.02);
+        }
+
+        .remove-wishlist-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .remove-wishlist-btn:hover {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+            color: #ff6666;
+        }
+
+        /* EMPTY STATE */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .empty-state i {
+            font-size: 6rem;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        .empty-state h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        .empty-state p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .empty-state-btn {
+            background: linear-gradient(to right, rgba(255, 126, 0, 0.76), #ff6300);
+            color: black;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .empty-state-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 99, 0, 0.5);
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: #242424;
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid rgba(255, 99, 0, 0.15);
+        }
+
+        .stats-info {
+            display: flex;
+            gap: 40px;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stat i {
+            color: #ff6300;
+            font-size: 1.2rem;
+        }
+
+        .stat-text {
+            color: #888;
+        }
+
+        .stat-value {
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .clear-all-btn {
+            background: rgba(255, 0, 0, 0.1);
+            color: #ff6666;
+            border: 2px solid rgba(255, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .clear-all-btn:hover {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .wishlist-item {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .wishlist-image {
+                width: 100%;
+                height: 250px;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .stats-info {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+        }
+
+        /* TOAST NOTIFICATION */
+        .toast {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff6300 0%, #ff8c42 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(255, 99, 0, 0.5);
+            z-index: 9999;
+            animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .toast.show {
+            display: flex;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: translateX(400px);
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <div class="logo">🎮 The QuackZone</div>
+        <a href="profile.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Volver al Perfil
+        </a>
+    </div>
+</header>
+
+<!-- WISHLIST CONTAINER -->
+<div class="wishlist-container">
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <h1 class="page-title">
+            <i class="fas fa-heart"></i>
+            Mi Lista de Deseos
+        </h1>
+        <p class="page-subtitle">Guarda tus juegos favoritos para comprarlos más tarde</p>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar" id="statsBar">
+        <div class="stats-info">
+            <div class="stat">
+                <i class="fas fa-gamepad"></i>
+                <div>
+                    <div class="stat-text">Total de Juegos</div>
+                    <div class="stat-value" id="totalGames">5</div>
+                </div>
+            </div>
+            <div class="stat">
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                    <div class="stat-text">Valor Total</div>
+                    <div class="stat-value" id="totalValue">S/. 909.50</div>
+                </div>
+            </div>
+        </div>
+        <button class="clear-all-btn" onclick="clearAllWishlist()">
+            <i class="fas fa-trash"></i>
+            Limpiar Lista
+        </button>
+    </div>
+
+    <!-- WISHLIST GRID -->
+    <div class="wishlist-grid" id="wishlistGrid">
+        <!-- Items se cargarán aquí -->
+    </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast"></div>
+
+<script>
+    // DATOS DE EJEMPLO PARA LA LISTA DE DESEOS
+    let wishlistData = [
+        {
+            id: 1,
+            titulo: "The Last of Us Part II",
+            precio: 189.90,
+            imagenUrl: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=400&h=600&fit=crop",
+            plataforma: "PS5"
+        },
+        {
+            id: 2,
+            titulo: "God of War Ragnarök",
+            precio: 199.90,
+            imagenUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=600&fit=crop",
+            plataforma: "PS5"
+        },
+        {
+            id: 3,
+            titulo: "Cyberpunk 2077",
+            precio: 149.90,
+            imagenUrl: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=600&fit=crop",
+            plataforma: "PC"
+        },
+        {
+            id: 4,
+            titulo: "Elden Ring",
+            precio: 179.90,
+            imagenUrl: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=600&fit=crop",
+            plataforma: "PC"
+        },
+        {
+            id: 5,
+            titulo: "Horizon Forbidden West",
+            precio: 189.90,
+            imagenUrl: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400&h=600&fit=crop",
+            plataforma: "PS5"
+        }
+    ];
+
+    // CARGAR LISTA DE DESEOS
+    function loadWishlist() {
+        const grid = document.getElementById('wishlistGrid');
+
+        if (wishlistData.length === 0) {
+            document.getElementById('statsBar').style.display = 'none';
+            grid.innerHTML = `
+                <div class="empty-state">
+                    <i class="fas fa-heart-broken"></i>
+                    <h3>Tu lista de deseos está vacía</h3>
+                    <p>Comienza a agregar juegos increíbles a tu lista</p>
+                    <a href="#" class="empty-state-btn">
+                        <i class="fas fa-gamepad"></i>
+                        Explorar Juegos
+                    </a>
+                </div>
+            `;
+            return;
+        }
+
+        document.getElementById('statsBar').style.display = 'flex';
+        grid.innerHTML = wishlistData.map(item => `
+            <div class="wishlist-item">
+                <img src="${item.imagenUrl}" alt="${item.titulo}" class="wishlist-image">
+                <div class="wishlist-content">
+                    <div class="wishlist-info">
+                        <h3 class="wishlist-title">${item.titulo}</h3>
+                        <span class="wishlist-platform">
+                            <i class="fas fa-${item.plataforma === 'PC' ? 'desktop' : 'playstation'}"></i>
+                            ${item.plataforma}
+                        </span>
+                        <div class="wishlist-price">S/. ${item.precio.toFixed(2)}</div>
+                    </div>
+                    <div class="wishlist-actions">
+                        <button class="add-cart-btn" onclick="addToCart(${item.id})">
+                            <i class="fas fa-shopping-cart"></i>
+                            Agregar al Carrito
+                        </button>
+                        <button class="remove-wishlist-btn" onclick="removeFromWishlist(${item.id})">
+                            <i class="fas fa-trash"></i>
+                            Eliminar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+        updateStats();
+    }
+
+    // ACTUALIZAR ESTADÍSTICAS
+    function updateStats() {
+        const totalGames = wishlistData.length;
+        const totalValue = wishlistData.reduce((sum, item) => sum + item.precio, 0);
+
+        document.getElementById('totalGames').textContent = totalGames;
+        document.getElementById('totalValue').textContent = `S/. ${totalValue.toFixed(2)}`;
+    }
+
+    // AGREGAR AL CARRITO
+    function addToCart(id) {
+        const item = wishlistData.find(i => i.id === id);
+        showToast(`✅ "${item.titulo}" agregado al carrito`);
+    }
+
+    // REMOVER DE LISTA DE DESEOS
+    function removeFromWishlist(id) {
+        const item = wishlistData.find(i => i.id === id);
+        wishlistData = wishlistData.filter(i => i.id !== id);
+        loadWishlist();
+        showToast(`🗑️ "${item.titulo}" eliminado de tu lista`);
+    }
+
+    // LIMPIAR TODA LA LISTA
+    function clearAllWishlist() {
+        if (wishlistData.length === 0) return;
+
+        if (confirm('¿Estás seguro de que quieres eliminar todos los juegos de tu lista de deseos?')) {
+            wishlistData = [];
+            loadWishlist();
+            showToast('🗑️ Lista de deseos limpiada completamente');
+        }
+    }
+
+    // MOSTRAR TOAST
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+
+    // INICIALIZAR
+    document.addEventListener('DOMContentLoaded', () => {
+        loadWishlist();
+    });
+</script>
+</body>
+</html>
