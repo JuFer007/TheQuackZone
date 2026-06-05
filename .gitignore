@@ -31,3 +31,19 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Node ###
+node_modules/
+
+### Vue build output ###
+backend/src/main/resources/static/vue/
+
+### Frontend dependencies ###
+frontend/node_modules/
+
+### Servidor dependencies ###
+servidor/node_modules/
+
+### Environment variables ###
+.env
+!.env.example

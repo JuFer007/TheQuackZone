@@ -1,0 +1,55 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: quackzone-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: quackzone
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: quackzone-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/quackzone?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: "123456"
+      JWT_SECRET: TheQuackZoneSuperSecretKeyForJWT2026MustBeAtLeast256BitsLong!!
+      NODE_SERVICE_URL: http://node-service:4000
+      EMAIL_LOGO_URL: http://localhost:8080/recursos/logoPagina.png
+    depends_on:
+      mysql:
+        condition: service_healthy
+      node-service:
+        condition: service_started
+
+  node-service:
+    build:
+      context: ./servidor
+      dockerfile: Dockerfile
+    container_name: quackzone-node
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      API_SERVICE_PORT: 4000
+      CORS_ORIGIN: http://localhost:8080
+    env_file:
+      - .env
+
+volumes:
+  mysql_data:

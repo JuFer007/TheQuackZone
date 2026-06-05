@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;padding:0;background:#191919;font-family:'Segoe UI',Arial,sans-serif">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#191919;padding:30px 10px">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#1a1a1a;border-radius:16px;overflow:hidden;border:1px solid #333">
+
+          <!-- HEADER -->
+          <tr>
+            <td style="background:linear-gradient(135deg,#1a1a1a 0%,#252525 100%);padding:35px 30px 25px;text-align:center">
+              <img src="https://i.postimg.cc/d0YKKWS3/logo-Pagina.png" alt="TheQuackZone" style="width:160px;height:auto;display:block;margin:0 auto 10px" onerror="this.style.display='none'">
+              <div style="width:60px;height:3px;background:#ff6300;margin:12px auto 0;border-radius:2px"></div>
+            </td>
+          </tr>
+
+          <!-- BODY -->
+          <tr>
+            <td style="background:#1e1e1e;padding:35px 30px">
+              <h1 style="color:#fff;font-size:24px;margin:0 0 8px;text-align:center">Perfil Actualizado</h1>
+              <p style="color:#888;font-size:14px;text-align:center;margin:0 0 25px">Tus datos fueron modificados exitosamente</p>
+
+              <div style="background:#2d2d2d;border-radius:12px;padding:25px;border:1px solid #3a3a3a">
+                <p style="color:#fff;font-size:15px;margin:0 0 15px">Hola <strong style="color:#ff8c42" th:text="${nombre}">Usuario</strong>,</p>
+                <p style="color:#aaa;font-size:14px;line-height:1.7;margin:0">Te notificamos que los datos de tu perfil en TheQuackZone han sido actualizados correctamente.</p>
+              </div>
+
+              <div style="background:#2d2d2d;border-radius:12px;padding:20px;margin-top:18px;border:1px solid #3a3a3a;text-align:center">
+                <p style="color:#ffc107;font-size:13px;margin:0">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#ffc107"/>
+                  </svg>
+                  Si no realizaste este cambio, contacta con soporte de inmediato.
+                </p>
+              </div>
+
+              <div style="text-align:center;margin:28px 0 0">
+                <a th:href="${frontendUrl}" style="display:inline-block;background:linear-gradient(to right,rgba(255,126,0,0.76),#ff6300);color:#fff;text-decoration:none;font-size:15px;font-weight:600;padding:14px 36px;border-radius:8px">Ir a mi perfil</a>
+              </div>
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td style="background:#191919;padding:20px 30px;text-align:center;border-top:1px solid #333">
+              <p style="color:#555;font-size:12px;margin:0 0 8px">© 2026 TheQuackZone. Todos los derechos reservados.</p>
+              <p style="color:#444;font-size:11px;margin:0">Este es un mensaje automático, por favor no respondas a este correo.</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

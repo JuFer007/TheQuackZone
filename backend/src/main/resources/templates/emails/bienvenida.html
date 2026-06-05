@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;padding:0;background:#191919;font-family:'Segoe UI',Arial,sans-serif">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#191919;padding:30px 10px">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#1a1a1a;border-radius:16px;overflow:hidden;border:1px solid #333">
+
+          <!-- HEADER -->
+          <tr>
+            <td style="background:linear-gradient(135deg,#1a1a1a 0%,#252525 100%);padding:35px 30px 25px;text-align:center">
+              <img src="https://i.postimg.cc/d0YKKWS3/logo-Pagina.png" alt="TheQuackZone" style="width:160px;height:auto;display:block;margin:0 auto 10px" onerror="this.style.display='none'">
+              <div style="width:60px;height:3px;background:#ff6300;margin:12px auto 0;border-radius:2px"></div>
+            </td>
+          </tr>
+
+          <!-- BODY -->
+          <tr>
+            <td style="background:#1e1e1e;padding:35px 30px">
+              <h1 style="color:#fff;font-size:24px;margin:0 0 8px;text-align:center">¡Bienvenido a TheQuackZone!</h1>
+              <p style="color:#888;font-size:14px;text-align:center;margin:0 0 25px">Tu cuenta ha sido creada con éxito</p>
+
+              <div style="background:#2d2d2d;border-radius:12px;padding:25px;border:1px solid #3a3a3a">
+                <p style="color:#fff;font-size:15px;margin:0 0 15px">Hola <strong style="color:#ff8c42" th:text="${nombre}">Usuario</strong>,</p>
+                <p style="color:#aaa;font-size:14px;line-height:1.6;margin:0 0 8px">Estamos emocionados de tenerte a bordo. Ahora puedes:</p>
+                <table cellpadding="0" cellspacing="0" style="margin:18px 0">
+                  <tr><td style="padding:5px 0;color:#aaa;font-size:14px">● &nbsp;Explorar nuestro catálogo de juegos</td></tr>
+                  <tr><td style="padding:5px 0;color:#aaa;font-size:14px">● &nbsp;Agregar juegos a tu carrito</td></tr>
+                  <tr><td style="padding:5px 0;color:#aaa;font-size:14px">● &nbsp;Crear tu lista de deseos</td></tr>
+                  <tr><td style="padding:5px 0;color:#aaa;font-size:14px">● &nbsp;Calificar y reseñar juegos</td></tr>
+                </table>
+              </div>
+
+              <div style="text-align:center;margin:28px 0 0">
+                <a th:href="${frontendUrl}" style="display:inline-block;background:linear-gradient(to right,rgba(255,126,0,0.76),#ff6300);color:#fff;text-decoration:none;font-size:15px;font-weight:600;padding:14px 36px;border-radius:8px">Ir a TheQuackZone</a>
+              </div>
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td style="background:#191919;padding:20px 30px;text-align:center;border-top:1px solid #333">
+              <p style="color:#555;font-size:12px;margin:0 0 8px">© 2026 TheQuackZone. Todos los derechos reservados.</p>
+              <p style="color:#444;font-size:11px;margin:0">Este es un mensaje automático, por favor no respondas a este correo.</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
