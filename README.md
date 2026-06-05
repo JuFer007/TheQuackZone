@@ -42,7 +42,13 @@ The QuackZone es una tienda virtual de videojuegos con una interfaz moderna. Los
   <img src="capturas/carritoLleno.png" width="280" style="border-radius:10px; margin:6px" />
 </div>
 
-### Perfil y autenticación
+### Autenticación
+<div align="center">
+  <img src="capturas/login.png" width="280" style="border-radius:10px; margin:6px" />
+  <img src="capturas/registro.png" width="280" style="border-radius:10px; margin:6px" />
+</div>
+
+### Perfil
 <div align="center">
   <img src="capturas/perfil.png" width="280" style="border-radius:10px; margin:6px" />
   <img src="capturas/editarPerfil.png" width="280" style="border-radius:10px; margin:6px" />
